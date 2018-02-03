@@ -1,0 +1,37 @@
+<html>
+<body>
+<h1>Display Evens</h1>
+<p>List of Numbers: 4,5,7,8,14,45,76</p>
+<button type="button" onclick = "getEven()">Get Evens</button>
+<p></p>
+<p></p>
+<div id ="evenDiv"></div>
+</body>
+<script>
+
+function getEven() {
+var result = 0;
+result = even(arr);
+document.getElementById("evenDiv").innerHTML = "The even numbers in this array are (" + result + ")";
+}
+var arr = [4,5,7,8,14,45,76];
+
+function even(a)
+{
+  var ar = [];  
+
+  for (x in a)
+  {
+
+    if((a[x]%2)==0)
+    ar.push(a[x]);  
+
+  }
+return ar;
+}
+
+
+
+</script>
+
+</html>
