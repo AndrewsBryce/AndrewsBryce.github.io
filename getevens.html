@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Evens</title>
+<script type='text/javascript'>
+/* Input: No user input.
+* Processing: Takes an array and counts how many even integers there are.
+* Output: Display how many even intergers there are.
+*/
+var list = [23, 54, 21, 12, 4, 9, 10];
+function geteven() {
+var result = 0;
+result = countEvens(list);
+document.getElementById("evenDiv").innerHTML = result;
+}
+// This function counts how many evens there are in the array.
+function countEvens(list) {
+  var ar = [];
+
+  for (var i = 0; i < a.length; i++) {
+    ar.push(a[2 * i + 1]);
+  }
+
+  return ar;
+}
+}
+return even;
+}
+</script>
+</head>
+<body>
+<h1>How Many Evens?</h1>
+<p>Here is our array.</p>
+<script>document.write(list);</script><br>
+<button type='button' onclick='geteven()'>Evens</button><br>
+<div id='evenDiv'></div>
+</body>
+</html>
