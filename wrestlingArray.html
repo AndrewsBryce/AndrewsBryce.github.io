@@ -51,11 +51,11 @@ function getWrestlers() {
 //instantiate a new array that takes turns the objects back into a json Array
   var newWrestlers = JSON.parse(str);
   //set the new array length to a variable to run it through the for loop
-
+ var text = "";
   while (newWrestlers.length > 0) {
-    document.getElementById("lition").innerHTML = newWrestlers.pop() + "<br/>";
+    text = newWrestlers.pop();
   }
-
+  document.getElementById("lition").innerHTML = text + "<br/>"
 }
 
 function getObjects(){
