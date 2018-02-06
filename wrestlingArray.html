@@ -7,9 +7,11 @@
 <body>
 <h2>2017-2018 Wrestling Opponents</h2>
 <p>The following is a list of Parker's wrestling opponents during his Freshman year in high school.</p>
+<h3>Associative Array</h3>
 <button type="button" onclick = "getOpponents()">Opponents</button>
-
 <p id="demo"></p>
+<h3>JSON</h3>
+<button type="button" onclick = "getWrestlers()">Wrestlers</button>
 
 <script>
 //Set up the function
@@ -31,6 +33,15 @@ for (i = 0; i < oLen; i++) {
 text += '</ul>';
 //print out the list to the user
 document.getElementById("demo").innerHTML = text;
+
+}
+
+function getWrestlers() {
+
+  JSON.parse('{"1": Tyler Sessions}', (key, value) => {
+    console.log(key); //log the current property name
+    return value;     //return the property value
+  })
 
 }
 
