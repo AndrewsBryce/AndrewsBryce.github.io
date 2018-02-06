@@ -52,8 +52,8 @@ function getWrestlers() {
   var newWrestlers = JSON.parse(str);
   //set the new array length to a variable to run it through the for loop
  var text = "";
-  while (newWrestlers.length > 0) {
-    text = newWrestlers.pop() + "<br/>";
+  while (newWrestlers.length =< newWrestlers.length - 1) {
+    text += newWrestlers.pop() + "<br/>";
   }
   document.getElementById("lition").innerHTML = text;
 }
