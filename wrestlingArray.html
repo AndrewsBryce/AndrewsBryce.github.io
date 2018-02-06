@@ -7,19 +7,32 @@
 <body>
 <h2>2017-2018 Wrestling Opponents</h2>
 <p>The following is a list of Parker's wrestling opponents during his Freshman year in high school.</p>
-<p id="demo"></p>
-<script>
+<button type="button" onclick = "getOpponents()">Opponents</button>
 
+<p id="demo"></p>
+
+<script>
+//Set up the function
+function getOpponents(){
+//set up the variables
 var opponents, text, oLen, i;
+//create the associative array
 opponents = ['Tyler Sessions', 'Logan Tingey', 'Alex Rodriguez', 'Tanner Smith', 'Garrett Beagley', 'Cooper Cooke', 'Harrison Haller-Cruz', 'Jaden Elsing', 'Xander Thompson', 'Brennen Bates', 'Kayson Kenney', 'Ethan Waldron', 'John Kallmeyer', 'Owen Hemphill', 'Braxton Bisenius', 'Kaden Brunk', 'Dante Roggio', 'Aaric Cuevas', 'Jaren Haggard', 'Crit Wilcox', 'Kade Flores', 'Kie Brown'];
+//set the variable olen to the length of the array
 oLen = opponents.length;
+//set the variable text to an unordered list
 text = '<ul>';
+//run the for loop to get the values of the indexes to print out
 for (i = 0; i < oLen; i++) {
+//get the vaules of the indexes and input them into a list
     text += "<li>" + opponents[i] + "</li>";
 }
 
 text += '</ul>';
+//print out the list to the user
 document.getElementById("demo").innerHTML = text;
+
+}
 
 </script>
 </body>
