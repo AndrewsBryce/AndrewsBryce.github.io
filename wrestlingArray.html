@@ -53,9 +53,9 @@ function getWrestlers() {
   //set the new array length to a variable to run it through the for loop
  var text = "";
   while (newWrestlers.length > 0) {
-    text = newWrestlers.pop();
+    text = newWrestlers.pop() + "<br/>";
   }
-  document.getElementById("lition").innerHTML = text + "<br/>"
+  document.getElementById("lition").innerHTML = text;
 }
 
 function getObjects(){
