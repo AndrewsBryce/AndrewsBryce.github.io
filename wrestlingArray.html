@@ -11,8 +11,8 @@
 <button type="button" onclick = "getOpponents()">Opponents</button>
 <p id="demo"></p>
 <h3>JSON</h3>
-<button type="button" onclick = "getWrestlers()">Wrestlers</button>
-<p id="lition"></p>
+<!--<button type="button" onclick = "getWrestlers()">Wrestlers</button>
+<p id="lition"></p>-->
 
 <script>
 //Set up the function
@@ -37,15 +37,14 @@ document.getElementById("demo").innerHTML = text;
 
 }
 
-function getWrestlers() {
-var value = "";
+//function getWrestlers() {
+//var value = "";
   JSON.parse('{"1": Tyler Sessions}', (key, value) => {
     console.log(key); //log the current property name
     return value;     //return the property value
   })
-document.getElementById("lition").innerHTML = value;
-}
-
+//document.getElementById("lition").innerHTML = value;
+//}
 </script>
 </body>
 </html>
