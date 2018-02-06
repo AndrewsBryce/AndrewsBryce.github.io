@@ -39,22 +39,23 @@ document.getElementById("demo").innerHTML = text;
 //set up  the function to demonstrate JSON
 function getWrestlers() {
   //Create the variables to use
-  var x, wlen, arr, text, wrestlers, str;
+  var x, wlen, text, wrestlers, str;
   //create an array of wrestlers
   wrestlers = ["Tyler Sessions", "Logan Tingey" ,"Alex Rodriguez", "Tanner Smith", "Garrett Beagley", "Cooper Cooke", "Harrison Haller-Cruz", "Jaden Elsing", "Xander Thompson", "Brennen Bates", "Kayson Kenney", "Ethan Waldron", "John Kallmeyer", "Owen Hemphill", "Braxton Bisenius", "Kaden Brunk", "Dante Roggio", "Aaric Cuevas", "Jaren Haggard", "Crit Wilcox", "Kade Flores", "Kie Brown"];
   //set a variable to stringify the wrestlers array
-/*  str = JSON.stringify(wrestlers);
+  str = JSON.stringify(wrestlers);
   //write the strings
   document.write(str);
   //input a break
-  document.write ("<br/>");*/
+  document.write ("<br/>");
 //instantiate a new array that takes turns the array into json objects
-  var newWrestlers = JSON.parse(wrestlers);
+  var newWrestlers = JSON.parse(str);
   //set the new array length to a variable to run it through the for loop
   wlen = newWrestlers.length;
   text = '<ul>'
   for (x = 0; x < oLen; x++){
-      text += "<li>" + opponents[i] + "</li>";
+      //text += "<li>" + opponents[i] + "</li>";
+    text =  document.write(newWrestlers.pop() + "<br/>");
   }
 document.getElementById("lition").innerHTML = text;
 }
