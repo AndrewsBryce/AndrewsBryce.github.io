@@ -2,7 +2,6 @@
 <html>
 <head>
 <style>
-div {
   /* -- swing like a gate -- */
     .swing .front,
     .swing .back {
@@ -36,6 +35,21 @@ div {
     }
 }
 </style>
+<script>
+// set up click/tap panels
+   $('.click').toggle(function(){
+     $(this).addClass('flip');
+   },function(){
+     $(this).removeClass('flip');
+   });
+
+   // set up block configuration
+   $('.block .action').click(function(){
+     $('.block').addClass('flip');
+   });
+   $('.block .edit-submit').click(function(e){
+     $('.block').removeClass('flip');
+</script>
 </head>
 <body>
 
@@ -45,7 +59,7 @@ div {
     </div>
     <div class="back">
       <div class="pad">
-      <h2><img id="back" src="andrewsBryce.github.io/git/playingcardback.png"></h2>
+      <h2><img id="back" url="http://4.bp.blogspot.com/_1AgA_BSRr40/TI_YtyvDrnI/AAAAAAAAAkA/MLMj23dgqtM/s1600/hoyleback.jpg"></h2>
       </div>
     </div>
   </div>
