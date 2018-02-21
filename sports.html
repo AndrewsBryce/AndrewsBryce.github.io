@@ -1,53 +1,64 @@
-<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Sports object</title>
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="styles/main.css">
+        <script type="text/javascript">
 
-<html lang="en-us">
-<head>
-<meta charset="utf-8">
-<title>Weather If Statement</title>
+            // Creating an object literal
+            var wrestler = {
+                firstName: "Parker",
+                lastName: "Andrews",
+                grade: 9,
+                school: "Bonneville",
+                record: "31-23",
 
-<script type="text/javascript">
-/*Input: Weather type
-*Process: Determine what footwear is suitable for the weather type
-*Output: A message that says what footwear to use
-*/
-function footWear() {
-//Get the user input.
-var text = document.getElementById('sportInputBox').value;
-var message;
-//Choose a message.
-if (text == 'Wrestling') {
-message = 'Wrestling Shoes';
-}
-else if (text == 'Football') {
-message = 'Football Cleats';
-}
-else if (text == 'Running') {
-message = 'Cross Trainers';
-}
-else if (text == 'Soccer') {
-message = 'Soccer Cleats';
-}
-else if (text == 'Ballet'){
-  message = 'Ballet Slippers';
-}
-else if (text == 'Snowboarding') {
-  message = 'Snowboard Boots';
-}
-else {
-message = 'Check Your Local Sports Shop';
-}
-document.getElementById('shoeDiv').innerHTML = "You should wear " + message;
-}
-</script>
-</head>
+                wrestlerName: function() {
+                return this.firstName + " " + this.lastName;
+                },
+                wrestlerInfo: function() {
+                return this.grade + ", " + this.school + " (" + this.record + ") ";
+                }
+            };
 
-<body>
-Enter a Sport (ex: Wrestling, Football, etc.): <input type="text" id="sportInputBox" size="10">
-<br>
-<br>
-<button type="button" onclick="footWear()">Footwear</button>
-<br>
-<br>
-<div id="shoeDiv"></div>
-</body>
-</html>
+            // Access object properties
+            console.log("First Name: " + person.firstName);
+            console.log("Last Name: " + person.lastName);
+            console.log("Grade: " + person["grade"]);
+
+            //Access Object Method Properties
+            console.log("Wrestler Name: " + person.wrestlerName());
+            console.log("Wrestler Info: " + person.wrestlerInfo());
+
+             // Create object using constructor
+            function Wrestlers (first, last, name) {
+                this.firstName = first;
+                this.lastName = last;
+                this.wrestlerName = first + " " + last;
+            }
+
+            var wrestlerOne = new Wrestlers("Kaden", "Hine");
+            var wrestlerTwo = new Wrestlers("Kade", "Hernandez");
+
+            //Access new Objects
+            console.log("First Wrestler's Name: " + wrestlerOne.fullName);
+            console.log("Second Wrestler's Name: " + wrestlerTwo.fullName);
+
+            //Add additional properities to object
+
+            wrestlerOne.grade = 10;
+            wrestlerTwo.grade = 10;
+
+            console.log("First Wrestler's Grade: " + wrestlerOne.grade);
+            console.log("Second Wrestler's Grade: " + wrestlerTwo.grade);
+
+        </script>
+    </head>
+    <body>
+        <h2>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
+        <p>Please "Inspect Element" and review the code and console to see the magic happen!</p>
+        <button type="button" onclick="window.location.href='index.html'">Index</button>
+    </body>
