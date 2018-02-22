@@ -2,68 +2,40 @@
 <html>
 <head>
 <style>
-  /* -- swing like a gate -- */
-    .swing .front,
-    .swing .back {
-      width: 140px;
-      height: 300px;
+div {
+  width: 100px;
+  height: 200px;
+    background-image: url("http://www.bestplayingcards.com/card.jpg");
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+}
 
-      -webkit-transition-duration: 1s;
-              transition-duration: 1s;
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-image: url("http://www.bestplayingcards.com/card.jpg"); left:0px; top:0px;}
+    25%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_spade_2.svg/2000px-Playing_card_spade_2.svg.png"); left:200px; top:0px;}
+    50%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playing_card_diamond_5.svg/2000px-Playing_card_diamond_5.svg.png"); left:200px; top:200px;}
+    75%  {background-image: url("https://pre00.deviantart.net/e0a1/th/pre/i/2017/026/6/1/my_playing_cards_v2___jack_of_clubs_by_gabe0530-dawruvv.png"); left:0px; top:200px;}
+    100% {background-image: url("http://www.bestplayingcards.com/card.jpg"); left:0px; top:0px;}
+}
 
-      -webkit-transform-origin: 170px 0;
-              transform-origin: 170px 0;
-    }
-    .swing .front {
-      -webkit-transform: rotateY(0);
-              transform: rotateY(0);
-    }
-    .swing .back {
-      background-color: #555; /* hiding this side, so get darker */
-      -webkit-transform: rotateY(-180deg) translateX(198px) translateZ(2px);
-              transform: rotateY(-180deg) translateX(198px) translateZ(2px);
-    }
-
-    .swing.flip .front {
-      background-image: image("AndrewsBryce.github.io/git/playingcardback.png"); /* hiding this side, so get darker */
-      -webkit-transform: rotateY(180deg);
-              transform: rotateY(180deg);
-    }
-    .swing.flip .back {
-      background-image: : image("AndrewsBryce.github.io/git/kingofhearts.png");
-      -webkit-transform: rotateY(0) translateX(198px) translateZ(2px);
-              transform: rotateY(0) translateX(198px) translateZ(2px);
-    }
+/* Standard syntax */
+@keyframes example {
+    0%   {background-image: url("http://www.bestplayingcards.com/card.jpg"); left:0px; top:0px;}
+    25%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_spade_2.svg/2000px-Playing_card_spade_2.svg.png"); left:200px; top:0px;}
+    50%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playing_card_diamond_5.svg/2000px-Playing_card_diamond_5.svg.png"); left:200px; top:200px;}
+    75%  {background-image: url("https://pre00.deviantart.net/e0a1/th/pre/i/2017/026/6/1/my_playing_cards_v2___jack_of_clubs_by_gabe0530-dawruvv.png"); left:0px; top:200px;}
+    100% {background-image: url("http://www.bestplayingcards.com/card.jpg"); left:0px; top:0px;}
 }
 </style>
-<script>
-// set up click/tap panels
-   $('.click').toggle(function(){
-     $(this).addClass('flip');
-   },function(){
-     $(this).removeClass('flip');
-   });
-
-   // set up block configuration
-   $('.block .action').click(function(){
-     $('.block').addClass('flip');
-   });
-   $('.block .edit-submit').click(function(e){
-     $('.block').removeClass('flip');
-</script>
 </head>
 <body>
 
-  <div class="click swing panel">
-    <div class="front">
-      <h2></h2>
-    </div>
-    <div class="back">
-      <div class="pad">
-      <h2><img id="back" url="http://4.bp.blogspot.com/_1AgA_BSRr40/TI_YtyvDrnI/AAAAAAAAAkA/MLMj23dgqtM/s1600/hoyleback.jpg"></h2>
-      </div>
-    </div>
-  </div>
+
+<div></div>
 
 </body>
 </html>
