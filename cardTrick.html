@@ -11,23 +11,25 @@ div {
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: example;
     animation-duration: 4s;
+    background-repeat: no-repeat;
+    background-size: contain, cover;
 }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
     0%   {background-image: url("http://www.bestplayingcards.com/card.jpg"); left:0px; top:0px;}
-    25%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_spade_2.svg/2000px-Playing_card_spade_2.svg.png"); left:200px; top:0px;}
-    50%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playing_card_diamond_5.svg/2000px-Playing_card_diamond_5.svg.png"); left:200px; top:200px;}
-    75%  {background-image: url("https://pre00.deviantart.net/e0a1/th/pre/i/2017/026/6/1/my_playing_cards_v2___jack_of_clubs_by_gabe0530-dawruvv.png"); left:0px; top:200px;}
+    25%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_spade_2.svg/2000px-Playing_card_spade_2.svg.png"); left:400px; top:0px;}
+    50%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playing_card_diamond_5.svg/2000px-Playing_card_diamond_5.svg.png"); left:400px; top:400px;}
+    75%  {background-image: url("https://pre00.deviantart.net/e0a1/th/pre/i/2017/026/6/1/my_playing_cards_v2___jack_of_clubs_by_gabe0530-dawruvv.png"); left:0px; top:400px;}
     100% {background-image: url("http://www.bestplayingcards.com/card.jpg"); left:0px; top:0px;}
 }
 
 /* Standard syntax */
 @keyframes example {
     0%   {background-image: url("http://www.bestplayingcards.com/card.jpg"); left:0px; top:0px;}
-    25%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_spade_2.svg/2000px-Playing_card_spade_2.svg.png"); left:200px; top:0px;}
-    50%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playing_card_diamond_5.svg/2000px-Playing_card_diamond_5.svg.png"); left:200px; top:200px;}
-    75%  {background-image: url("https://pre00.deviantart.net/e0a1/th/pre/i/2017/026/6/1/my_playing_cards_v2___jack_of_clubs_by_gabe0530-dawruvv.png"); left:0px; top:200px;}
+    25%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_spade_2.svg/2000px-Playing_card_spade_2.svg.png"); left:400px; top:0px;}
+    50%  {background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playing_card_diamond_5.svg/2000px-Playing_card_diamond_5.svg.png"); left:400px; top:400px;}
+    75%  {background-image: url("https://pre00.deviantart.net/e0a1/th/pre/i/2017/026/6/1/my_playing_cards_v2___jack_of_clubs_by_gabe0530-dawruvv.png"); left:0px; top:400px;}
     100% {background-image: url("http://www.bestplayingcards.com/card.jpg"); left:0px; top:0px;}
 }
 </style>
