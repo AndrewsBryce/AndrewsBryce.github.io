@@ -25,11 +25,6 @@ div {
     background-repeat: no-repeat;
     background-size: contain, cover;
 }
-div #growing {
-  visibility: hidden;
-}
-
-
 
 div:hover {
     width: 300px;
@@ -41,12 +36,7 @@ div:hover {
 
 
 </style>
-<script>
-var audio = $("#growing")[0];
-$("nav a").mouseenter(function() {
-  audio.play();
-});
-</script>
+
 </head>
 <body>
 
@@ -57,10 +47,7 @@ $("nav a").mouseenter(function() {
 <p>Hover over the card to watch it grow!</p>
 
 <div>
-<div id="growing"><iframe width="560" height="315" src="https://www.youtube.com/embed/X7uTyl8Jsso" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 </div>
-<audio preload="auto" id="sound-1" >
-<source src="https://www.youtube.com/embed/X7uTyl8Jsso?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay">
-</audio>
+
 </body>
 </html>
