@@ -11,6 +11,13 @@
   var mapProp= {
       center:new google.maps.LatLng(51.508742,-0.120850),
       zoom:5,
+      panControl: true;
+      zoomControl: true;
+      mapTypeControl: true;
+      scaleControl: true;
+      streetViewControl: true;
+      overviewMapControl: true;
+      rotateControl: true;
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   }
@@ -31,7 +38,8 @@
 <h1>Google Map: For you enjoyment.</h1>
 
 <div id="googleMap"></div>
-
+<br>
+<br>
 <button type="button" onclick="window.location.href='index.html'">Index</button>
 </body>
 </html>
