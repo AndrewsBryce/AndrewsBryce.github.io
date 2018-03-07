@@ -20,9 +20,9 @@
       overviewMapControl: true,
       rotateControl: true
     };
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-}
-
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+  }
+  </script>
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=initMap"
   type="text/javascript"></script>
@@ -43,89 +43,17 @@
     50% {border-color: lightblue;}
 }
 }
-
-label{
-  margin-bottom:.1em;
-  }
-  fieldset,legend{
-    border:0;
-    }
-    input,select,textarea{
-      color:inherit;font:inherit;padding:.5em;
-      margin:0 5px 5px 0;
-      border:1px solid #ccc;
-      box-shadow:inset 0 1px 3px #ddd;
-      border-radius:4px;
-      display:inline-block;
-      font-size:100%;
-      line-height:normal;
-      max-width:100%
-      }
-      .margina{
-        margin:10px auto
-        }
-        select{
-          text-transform:none;background-color:#fff;
-          display:inline-block;
-          font-size:100%;
-          height:2.5em
-          }
-          button,.button{
-            overflow:visible;
-            font:inherit;
-            text-transform:none;
-            letter-spacing:1px;
-            border:0;
-            line-height:normal;
-            white-space:nowrap;
-            padding:.5em;color:#fff;
-            background-color:#1f8dd6;
-            border-radius:4px;
-            display:inline-block;
-            font-size:100%;
-            text-align:center
-            }
-            .button:focus,.button:hover{
-              opacity:.9
-              }
-              button,html input[type="button"],input[type="submit"]{
-                cursor:pointer
-              }
-                input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{
-                  height:auto
-                  }
-                  textarea{
-                    overflow:auto
-                  }
 </style>
 </head>
 
 <body>
 
-<h1>Google Map: For your enjoyment.</h1>
+<h1>Google Map: For you enjoyment.</h1>
 
 <div id="googleMap"></div>
 <br>
 <br>
-<form id="et2120">
-<label for="Lr2620">Place Name</label>
-<input id="Lr2620" type="text" placeholder="Type a place name" class="width70" required  />
-<button title="Find Lat &amp; Long" class="button">Find</button><br />
-<small>Add the country code for better results. Ex: London, UK</small>
-</form>
-<br>
-<div class="row">
-<div class="col-6 m2">
-<label for="lat">Latitude</label>
-<input type="text" name="lat" id="lat" placeholder="lat coordinate" />
-</div>
-<div class="col-6 m2">
-<label for="lng">Longitude</label>
-<input type="text" name="lng" id="lng" placeholder="long coordinate" />
-</div>
-</div>
-<br>
-<br>
+
 <button type="button" onclick="window.location.href='index.html'">Index</button>
 </body>
 </html>
