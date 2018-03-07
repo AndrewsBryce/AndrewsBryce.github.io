@@ -22,11 +22,7 @@
       rotateControl: true
     };
 var map = new google.maps.Map(mapCanvas, mapOptions);
-google.maps.event.addListener(map, "click", function (e) {
-marker.setPosition(e.latLng);
-var t = e.latLng, o = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")";
-infowindow.setContent(o), document.getElementById("lat").value = t.lat().toFixed(6), document.getElementById("lng").value = t.lng().toFixed(6), t.lat().toFixed(6) + "&long=" + t.lng().toFixed(6), dec2dms()
-}), google.maps.event.addListener(map, "mousemove", function (e) {
+google.maps.event.addListener(map, "mousemove", function (e) {
 var t = e.latLng;
 document.getElementById("mlat").innerHTML = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")"
 })
