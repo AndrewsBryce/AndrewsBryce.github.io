@@ -23,7 +23,7 @@
     var map = new google.maps.Map(mapCanvas, mapOptions);
   }
   </script>
-  <script>
+<!--  <script>
   !function(e,t){function n(){t.getElementById("navmenu").classList.toggle("list-vertical"),t.getElementsByTagName("header")[0].classList.toggle("open"),t.getElementsByTagName("body")[0].classList.toggle("open");
 }
 function s(){o.classList.contains("open")?setTimeout(n,500):n(),o.classList.toggle("open"),t.getElementsByTagName("main")[0].classList.toggle("open");
@@ -31,6 +31,7 @@ function s(){o.classList.contains("open")?setTimeout(n,500):n(),o.classList.togg
 function i(){o.classList.contains("open")&&s()}var o=t.getElementById("menu"),a="onorientationchange"in e?"orientationchange":"resize";
   t.getElementById("toggle").addEventListener("click",function(){s()}),e.addEventListener(a,i)}(this,this.document);
   </script>
+-->
   <script type="text/javascript">
 function initialize() {
 var e = new google.maps.LatLng(1.1, 1.1), t = {zoom: 2, center: e, panControl: !0, scrollwheel: !1, scaleControl: !0, overviewMapControl: !0, overviewMapControlOptions: {opened: !0}, mapTypeId: google.maps.MapTypeId.HYBRID};
@@ -70,7 +71,7 @@ document.getElementById("mlat").innerHTML = "(" + t.lat().toFixed(6) + ", " + t.
   }
   </script>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=initMap"
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=initialize"
   type="text/javascript"></script>
 <style>
 #googleMap {
