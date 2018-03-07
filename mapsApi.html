@@ -22,42 +22,7 @@
       rotateControl: true
     };
 var map = new google.maps.Map(mapCanvas, mapOptions);
-google.maps.event.addListener(map, "click", function (e) {
-marker.setPosition(e.latLng);
-var t = e.latLng, o = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")";
-infowindow.setContent(o), document.getElementById("lat").value = t.lat().toFixed(6), document.getElementById("lng").value = t.lng().toFixed(6), document.getElementById("latlngspan").innerHTML = o, document.getElementById("coordinatesurl").value = "https://andrewsbryce.github.io/mapsApi.html" + t.lat().toFixed(6) + "&long=" + t.lng().toFixed(6), document.getElementById("coordinateslink").innerHTML = '&lt;a href="https://andrewsbryce.github.io/mapsApi.html' + t.lat().toFixed(6) + "&amp;long=" + t.lng().toFixed(6) + '" target="_blank"&gt;(' + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")&lt;/a&gt;", dec2dms()
-}), google.maps.event.addListener(map, "mousemove", function (e) {
-var t = e.latLng;
-document.getElementById("mlat").innerHTML = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")"
-})
-
 }
-  function codeAddress(e) {
-  e.preventDefault && e.preventDefault();
-  var t = document.getElementById("Lr2620").value;
-  return"" === t ? void alert("Address can not be empty!") : void geocoder.geocode({address: t}, function (e, t) {
-  if (t === google.maps.GeocoderStatus.OK) {
-  map.setCenter(e[0].geometry.location), document.getElementById("lat").value = e[0].geometry.location.lat().toFixed(6), document.getElementById("lng").value = e[0].geometry.location.lng().toFixed(6);
-  var o = "(" + e[0].geometry.location.lat().toFixed(6) + ", " + +e[0].geometry.location.lng().toFixed(6) + ")";
-  document.getElementById("latlngspan").innerHTML = o, document.getElementById("coordinatesurl").value = "https://www.latlong.net/c/?lat=" + e[0].geometry.location.lat().toFixed(6) + "&long=" + e[0].geometry.location.lng().toFixed(6), document.getElementById("coordinateslink").innerHTML = '&lt;a href="https://andrewsbryce.github.io/mapsApi.html' + e[0].geometry.location.lat().toFixed(6) + "&amp;long=" + e[0].geometry.location.lng().toFixed(6) + '" target="_blank"&gt;(' + e[0].geometry.location.lat().toFixed(6) + ", " + e[0].geometry.location.lng().toFixed(6) + ")&lt;/a&gt;", marker.setPosition(e[0].geometry.location), map.setZoom(16), infowindow.setContent(o), infowindow && infowindow.close(), google.maps.event.addListener(marker, "click", function () {
-  infowindow.open(map, marker)
-  }), infowindow.open(map, marker), dec2dms()
-  } else
-  alert("Lat and long cannot be found.")
-  })
-  }
-  var latlongform = document.getElementById("et2120");
-  latlongform.attachEvent ? latlongform.attachEvent("submit", codeAddress) : latlongform.addEventListener("submit", codeAddress);
-  var map, geocoder, marker, infowindow;
-  function dec2dms() {
-  var e = document.getElementById("lat").value, t = document.getElementById("lng").value;
-  document.getElementById("dms-lat").innerHTML = getdms(e, !0), document.getElementById("dms-lng").innerHTML = getdms(t, !1)
-  }
-  function getdms(e, t) {
-  var n = 0, m = 0, l = 0, a = "X";
-  return a = t && 0 > e ? "S" : !t && 0 > e ? "W" : t ? "N" : "E", d = Math.abs(e), n = Math.floor(d), l = 3600 * (d - n), m = Math.floor(l / 60), l = Math.round(1e4 * (l - 60 * m)) / 1e4, n + "&deg; " + m + "' " + l + "'' " + a
-  }
-  </script>
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=initMap"
   type="text/javascript"></script>
