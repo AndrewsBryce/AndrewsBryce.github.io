@@ -10,7 +10,7 @@
   function initMap() {
     var mapCanvas = document.getElementById("googleMap");
     var mapOptions = {
-      center: new google.maps.LatLng(51.508742, -0.120850),
+      center: new google.maps.LatLng(43.524905, -111.931983),
       zoom: 7,
       panControl: true,
       zoomControl: true,
@@ -30,6 +30,18 @@
 #googleMap {
   width: 50%;
   height: 400px;
+  border: 15px solid coral;
+ -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+ animation: mymove 5s infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    50% {border-color: lightblue;}
+}
+
+@keyframes mymove {
+    50% {border-color: lightblue;}
+}
 }
 </style>
 </head>
