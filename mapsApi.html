@@ -20,6 +20,7 @@
       overviewMapControl: true,
       rotateControl: true
     };
+var map = new google.maps.Map(mapCanvas, mapOptions);
 google.maps.event.addListener(map, "click", function (e) {
 marker.setPosition(e.latLng);
 var t = e.latLng, o = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")";
@@ -28,7 +29,7 @@ infowindow.setContent(o), document.getElementById("lat").value = t.lat().toFixed
 var t = e.latLng;
 document.getElementById("mlat").innerHTML = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")"
 })
-    var map = new google.maps.Map(mapCanvas, mapOptions);
+
 }
   function codeAddress(e) {
   e.preventDefault && e.preventDefault();
