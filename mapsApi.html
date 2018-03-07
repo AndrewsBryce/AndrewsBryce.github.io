@@ -6,7 +6,7 @@
           <title>Google Map</title>
   <meta name="author" content="Bryce Andrews">
 
-  <!--<script>
+  <script>
   function initMap() {
     var mapCanvas = document.getElementById("googleMap");
     var mapOptions = {
@@ -20,21 +20,7 @@
       overviewMapControl: true,
       rotateControl: true
     };
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-  }
-</script>-->
-<!--  <script>
-  !function(e,t){function n(){t.getElementById("navmenu").classList.toggle("list-vertical"),t.getElementsByTagName("header")[0].classList.toggle("open"),t.getElementsByTagName("body")[0].classList.toggle("open");
-}
-function s(){o.classList.contains("open")?setTimeout(n,500):n(),o.classList.toggle("open"),t.getElementsByTagName("main")[0].classList.toggle("open");
-}
-function i(){o.classList.contains("open")&&s()}var o=t.getElementById("menu"),a="onorientationchange"in e?"orientationchange":"resize";
-  t.getElementById("toggle").addEventListener("click",function(){s()}),e.addEventListener(a,i)}(this,this.document);
-</script>-->
-  <script type="text/javascript">
-function initialize() {
-var e = new google.maps.LatLng(1.1, 1.1), t = {zoom: 2, center: e, panControl: !0, scrollwheel: !1, scaleControl: !0, overviewMapControl: !0, overviewMapControlOptions: {opened: !0}, mapTypeId: google.maps.MapTypeId.HYBRID};
-map = new google.maps.Map(document.getElementById("latlongmap"), t), geocoder = new google.maps.Geocoder, marker = new google.maps.Marker({position: e, map: map}), map.streetViewControl = !1, infowindow = new google.maps.InfoWindow({content: "(1.10, 1.10)"}), google.maps.event.addListener(map, "click", function (e) {
+google.maps.event.addListener(map, "click", function (e) {
 marker.setPosition(e.latLng);
 var t = e.latLng, o = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")";
 infowindow.setContent(o), document.getElementById("lat").value = t.lat().toFixed(6), document.getElementById("lng").value = t.lng().toFixed(6), document.getElementById("latlngspan").innerHTML = o, document.getElementById("coordinatesurl").value = "https://www.latlong.net/c/?lat=" + t.lat().toFixed(6) + "&long=" + t.lng().toFixed(6), document.getElementById("coordinateslink").innerHTML = '&lt;a href="https://www.latlong.net/c/?lat=' + t.lat().toFixed(6) + "&amp;long=" + t.lng().toFixed(6) + '" target="_blank"&gt;(' + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")&lt;/a&gt;", dec2dms()
@@ -42,6 +28,7 @@ infowindow.setContent(o), document.getElementById("lat").value = t.lat().toFixed
 var t = e.latLng;
 document.getElementById("mlat").innerHTML = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")"
 })
+    var map = new google.maps.Map(mapCanvas, mapOptions);
 }
   function codeAddress(e) {
   e.preventDefault && e.preventDefault();
@@ -70,7 +57,7 @@ document.getElementById("mlat").innerHTML = "(" + t.lat().toFixed(6) + ", " + t.
   }
   </script>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=initialize"
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=initMap"
   type="text/javascript"></script>
 <style>
 #googleMap {
