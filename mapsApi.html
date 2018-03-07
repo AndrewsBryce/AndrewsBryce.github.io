@@ -8,9 +8,10 @@
 
   <script>
   function initMap() {
+    var e = new google.maps.LatLng(43.524905, -111.931983)
     var mapCanvas = document.getElementById("googleMap");
     var mapOptions = {
-      center: new google.maps.LatLng(43.524905, -111.931983),
+      center: e,
       zoom: 7,
       panControl: true,
       zoomControl: true,
