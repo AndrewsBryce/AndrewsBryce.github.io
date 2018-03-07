@@ -25,7 +25,7 @@ var map = new google.maps.Map(mapCanvas, mapOptions);
 google.maps.event.addListener(map, "click", function (e) {
 marker.setPosition(e.latLng);
 var t = e.latLng, o = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")";
-infowindow.setContent(o), document.getElementById("lat").value = t.lat().toFixed(6), document.getElementById("lng").value = t.lng().toFixed(6), document.getElementById("latlngspan").innerHTML = o, document.getElementById("coordinatesurl").value = "https://andrewsbryce.github.io/mapsApi.html" + t.lat().toFixed(6) + "&long=" + t.lng().toFixed(6), document.getElementById("coordinateslink").innerHTML = '&lt;a href="https://www.latlong.net/c/?lat=' + t.lat().toFixed(6) + "&amp;long=" + t.lng().toFixed(6) + '" target="_blank"&gt;(' + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")&lt;/a&gt;", dec2dms()
+infowindow.setContent(o), document.getElementById("lat").value = t.lat().toFixed(6), document.getElementById("lng").value = t.lng().toFixed(6), t.lat().toFixed(6) + "&long=" + t.lng().toFixed(6), dec2dms()
 }), google.maps.event.addListener(map, "mousemove", function (e) {
 var t = e.latLng;
 document.getElementById("mlat").innerHTML = "(" + t.lat().toFixed(6) + ", " + t.lng().toFixed(6) + ")"
@@ -39,8 +39,6 @@ document.getElementById("mlat").innerHTML = "(" + t.lat().toFixed(6) + ", " + t.
   if (t === google.maps.GeocoderStatus.OK) {
   map.setCenter(e[0].geometry.location), document.getElementById("lat").value = e[0].geometry.location.lat().toFixed(6), document.getElementById("lng").value = e[0].geometry.location.lng().toFixed(6);
   var o = "(" + e[0].geometry.location.lat().toFixed(6) + ", " + +e[0].geometry.location.lng().toFixed(6) + ")";
-  document.getElementById("latlngspan").innerHTML = o, document.getElementById("coordinatesurl").value = "https://www.latlong.net/c/?lat=" + e[0].geometry.location.lat().toFixed(6) + "&long=" + e[0].geometry.location.lng().toFixed(6), document.getElementById("coordinateslink").innerHTML = '&lt;a href="https://andrewsbryce.github.io/mapsApi.html' + e[0].geometry.location.lat().toFixed(6) + "&amp;long=" + e[0].geometry.location.lng().toFixed(6) + '" target="_blank"&gt;(' + e[0].geometry.location.lat().toFixed(6) + ", " + e[0].geometry.location.lng().toFixed(6) + ")&lt;/a&gt;", marker.setPosition(e[0].geometry.location), map.setZoom(16), infowindow.setContent(o), infowindow && infowindow.close(), google.maps.event.addListener(marker, "click", function () {
-  infowindow.open(map, marker)
   }), infowindow.open(map, marker), dec2dms()
   } else
   alert("Lat and long cannot be found.")
