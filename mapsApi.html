@@ -8,10 +8,9 @@
 
   <script>
   function initMap() {
-    var e = new google.maps.LatLng(43.524905, -111.931983)
     var mapCanvas = document.getElementById("googleMap");
     var mapOptions = {
-      center: e,
+      center: new google.maps.LatLng(43.524905, -111.931983),
       zoom: 7,
       panControl: true,
       zoomControl: true,
@@ -21,8 +20,9 @@
       overviewMapControl: true,
       rotateControl: true
     };
-var map = new google.maps.Map(mapCanvas, mapOptions);
+        var map = new google.maps.Map(mapCanvas, mapOptions);
 }
+
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=initMap"
   type="text/javascript"></script>
@@ -126,8 +126,6 @@ label{
 </div>
 <br>
 <br>
-<h3 class="titleh3">Lat Long</h3>
-<span id="latlngspan" class="coordinatetxt">0,0</span>
 <button type="button" onclick="window.location.href='index.html'">Index</button>
 </body>
 </html>
