@@ -9,19 +9,13 @@
   type="text/javascript"></script>
   <script>
 
-    var map = new google.maps.Map(document.getElementById("googleMap"),{
+    var map = new google.maps.Map(document.getElementById("Mapit"),{
       center: {
         lat: 53.694712,
         lng: -6.475492
       },
       zoom: 7,
-      panControl: true,
-      zoomControl: true,
-      mapTypeControl: true,
-      scaleControl: true,
-      streetViewControl: true,
-      overviewMapControl: true,
-      rotateControl: true
+
     });
 
     var marker = new google.maps.Marker({
@@ -77,10 +71,10 @@
 </head>
 
 <body>
-
+<script src="https://maps.googleapis.com/map/api/js?sensor=false"></script>
 <h1>Google Map: For you enjoyment.</h1>
 <input type="text" id="mapsearch">
-<div id="googleMap"></div>
+<div id="Mapit"></div>
 <br>
 <br>
 
