@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
           <title>Google Map</title>
   <meta name="author" content="Bryce Andrews">
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=myMap&libraries=places"
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&libraries=places"
   type="text/javascript"></script>
   <script>
-  function myMap(){
+
     var map = new google.maps.Map(document.getElementById("Mapit"),{
       center: {
         lat: 53.694712,
@@ -32,7 +32,7 @@
       map:map,
       draggable: true
     });
-  }
+
 
     var searchBox = new google.maps.places.searchBox(document.getElementById('mapsearch'));
 
