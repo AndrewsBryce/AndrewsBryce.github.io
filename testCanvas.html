@@ -204,6 +204,8 @@ function generateRestoreButtons (){
          border-radius: 50px;
          color: white;
        }
+
+       #
        </style>
 
 
@@ -214,7 +216,7 @@ function generateRestoreButtons (){
     <button id="colorRed" onclick="colorPen('rgb(255,0,0)');">Red Pen</button>
     <button id="colorGreen" onclick="colorPen('rgb(0,255,0)');">Green Pen</button>
     <button id="colorBlue" onclick="colorPen('rgb(0,0,255)');">Blue Pen</button><br><br>
-    <input id="penWidth" type= "text" name = "penWidth" /><button onclick ="setPenwidthFromInput();">Pen Width</button>
+    <input id="penWidth" type= "range" name = "penWidth" values = "90"/><button onclick ="setPenwidthFromInput();">Pen Width</button>
     <input id="canvasName" type= "text" name = "canvasName" /><button id="saveLocal" onclick="saveLocal();">Save</button>
     <div id="restore"></div>
     <button id="clearlocalstorage" onclick="localStorage.clear(); generateRestoreButtons();"> Delete All</button>
