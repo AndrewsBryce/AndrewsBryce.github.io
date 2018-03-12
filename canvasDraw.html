@@ -30,7 +30,7 @@ var markerSize;
 draw.onmousedown = function(e) {
   yesDraw = true;
 
-   var draw = document.getElementById('c');
+   var draw = document.getElementById('canv');
     var cont = draw.getContext('2d');
 
       cont.beginPath();
@@ -42,7 +42,7 @@ draw.ontouchstart = function(e) {
     e.preventDefault();
   yesDraw = true;
    alert("hello");
-   var draw = document.getElementById('c');
+   var draw = document.getElementById(canv);
     var cont = draw.getContext('2d');
 
       cont.beginPath();
@@ -52,7 +52,7 @@ draw.ontouchstart = function(e) {
 };
 draw.onmousemove = function(e) {
   if (yesDraw) {
-      var draw = document.getElementById('c');
+      var draw = document.getElementById(canv);
     var cont = draw.getContext('2d');
     cont.lineWidth = markerSize;
     cont.lineTo(e.clientX, e.clientY);
@@ -63,7 +63,7 @@ draw.onmousemove = function(e) {
 draw.ontouchmove = function(e) {
     e.preventDefault();
   if (yesDraw) {
-      var draw = document.getElementById('c');
+      var draw = document.getElementById(canv);
     var cont = draw.getContext('2d');
     cont.lineWidth = markerSize;
     cont.lineTo(e.clientX, e.clientY);
@@ -72,7 +72,7 @@ draw.ontouchmove = function(e) {
   }
 };
 draw.onmouseup = function() {
-    var draw = document.getElementById('c');
+    var draw = document.getElementById(canv);
     var cont = draw.getContext('2d');
   yesDraw = false;
   cont.closePath();
@@ -80,7 +80,7 @@ draw.onmouseup = function() {
 };
 draw.ontouchend = function() {
     e.preventDefault();
-    var draw = document.getElementById('c');
+    var draw = document.getElementById(canv);
     var cont = draw.getContext('2d');
   yesDraw = false;
   cont.closePath();
@@ -89,7 +89,7 @@ draw.ontouchend = function() {
 // set all pixels of the image to this color
 function colorPen(color) {
   markerC = color;
-    var draw = document.getElementById('c');
+    var draw = document.getElementById(canv);
     var cont = draw.getContext('2d');
     cont.fillStyle = "white";
     cont.closePath();
@@ -97,7 +97,7 @@ function colorPen(color) {
 }
 
 function clearCanvas(){
-    var draw = document.getElementById('c');
+    var draw = document.getElementById(canv);
     var cont = draw.getContext('2d');
     cont.fillStyle = "white";
     cont.fillRect(0,0,draw.getAttribute("width").valueOf(),draw.getAttribute("height").valueOf());
@@ -115,7 +115,7 @@ function setmarkerSizeFromInput(){
 function setmarkerSize(pw) {
 
   markerSize = pw;
-    var draw = document.getElementById('c');
+    var draw = document.getElementById(canv);
     var cont = draw.getContext('2d');
     cont.fillStyle = "white";
     cont.closePath();
@@ -125,7 +125,7 @@ function setmarkerSize(pw) {
 
 function saveLocal(){
     //localStorage.setItem('markerC', markerC);
-    var draw = document.getElementById('c');
+    var draw = document.getElementById(canv);
     canvasData = draw.toDataURL();
     var userCanvas = {
         "markerC": markerC,
@@ -148,7 +148,7 @@ function restoreLocal(name){
     setmarkerSize(userCanvas['markerSize']);
     var image = new Image;
     image.onload = function(){
-    var draw = document.getElementById('c');
+    var draw = document.getElementById(canv);
     var cont = draw.getContext('2d');
     cont.drawImage(image,0,0);
     }
