@@ -178,31 +178,31 @@ function generateRestoreButtons (){
        <style>
        #clear{
          background-color: white;
-         border-radius: 50%;
+         border-radius: 50px;
        }
 
        #colorBlack{
          background-color: rgb(0,0,0);
-         border-radius: 50%;
+         border-radius: 50px;
          color: white;
        }
 
        #colorRed{
          background-color: rgb(255,0,0);
-         border-radius: 50%;
+         border-radius: 50px;
          color: black;
        }
 
        #colorGreen{
          background-color: rgb(0,255,0);
-         border-radius: 50%;
+         border-radius: 50px;
          color: black;
        }
 
        #colorBlue{
          background-color: rgb(0,0,255);
-         border-radius: 50%;
-         color: black;
+         border-radius: 50px;
+         color: white;
        }
        </style>
 
@@ -210,14 +210,14 @@ function generateRestoreButtons (){
 <br style="clear:both;"/>
 
     <button id="clear" onclick="clearCanvas();">Clear</button>
-    <button id="colorBlack" onclick="colorPen('rgb(0,0,0)');">Black Pen</button>
-    <button id="colorRed" onclick="colorPen('rgb(255,0,0)');">Red Pen</button>
-    <button id="colorGreen" onclick="colorPen('rgb(0,255,0)');">Green Pen</button>
-    <button id="colorBlue" onclick="colorPen('rgb(0,0,255)');">Blue Pen</button><br><br>
-    <input id="markerSize" type= "text" name = "markerSize" /><button onclick ="setmarkerSizeFromInput();">Pen Width</button>
-    <input id="canvasName" type= "text" name = "canvasName" /><button id="saveLocal" onclick="saveLocal();">Save</button>
+    <button id="colorBlack" onclick="colorPen('rgb(0,0,0)');">Black</button>
+    <button id="colorRed" onclick="colorPen('rgb(255,0,0)');">Red</button>
+    <button id="colorGreen" onclick="colorPen('rgb(0,255,0)');">Green</button>
+    <button id="colorBlue" onclick="colorPen('rgb(0,0,255)');">Blue</button><br><br>
+    <input id="markerSize" type= "text" name = "markerSize" /><button onclick ="setmarkerSizeFromInput();">Marker Width</button>
+    <input id="canvasName" type= "text" name = "canvasName" /><button id="saveLocal" onclick="saveLocal();">Save Drawing</button>
     <div id="restore"></div>
-    <button id="clearlocalstorage" onclick="localStorage.clear(); generateRestoreButtons();"> Delete All</button>
+    <button id="clearlocalstorage" onclick="localStorage.clear(); generateRestoreButtons();"> Delete Saved</button>
 
 
 </body>
