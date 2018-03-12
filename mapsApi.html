@@ -21,7 +21,8 @@
       rotateControl: true
     };
     var map = new google.maps.Map(document.getElementById('Mapit'), mapOptions);
-    var acOptions = {
+  }
+  /*  var acOptions = {
       types: ['establishments']
     };
     var searchBox = new google.maps.places.searchBox(document.getElementById('mapsearch'));
@@ -62,7 +63,7 @@
     });
   }
 
-  /*  var searchBox = new google.maps.places.searchBox(document.getElementById('mapsearch'));
+  var searchBox = new google.maps.places.searchBox(document.getElementById('mapsearch'));
 
     //place change event on searchBox
     google.maps.event.addListener(searchBox, 'places_changed', function(){
@@ -82,6 +83,7 @@
       map.fitBounds(bounds); //fit to the bounds
       map.setZoom(7); //set zoom
     });*/
+
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=myMap" type="text/javascript"></script>
 
