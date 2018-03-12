@@ -163,7 +163,7 @@ function generateRestoreButtons (){
     var keys = Object.keys(localStorage);
     for(i in keys){
         key = localStorage.key(i);
-        var buttonString = `<button onclick="restoreLocal('${ key }');" id="${ key }">restore ${ key }</button><br>`;
+        var buttonString = `<button id="rbutt" onclick="restoreLocal('${ key }');" id="${ key }">restore ${ key }</button><br>`;
         restore.innerHTML += buttonString;
 
 
@@ -181,11 +181,11 @@ function generateRestoreButtons (){
        }
 
        #c{
-         margin-left: 50%;
+         margin: auto;
        }
 
        #ccontrol{
-         margin-left: 50%;
+         margin: auto;
        }
 
        #clear{
@@ -217,7 +217,29 @@ function generateRestoreButtons (){
          color: white;
        }
 
-       #
+       #penWidth{
+         background-color: white;
+         border-radius: 50px;
+         color: black;
+       }
+
+       #saveLocal{
+         background-color: white;
+         border-radius: 50px;
+         color: black;
+       }
+
+       #clearlocalstorage{
+         background-color: white;
+         border-radius: 50px;
+         color: black;
+       }
+
+       #rbutt{
+         background-color: white;
+         border-radius: 50px;
+         color: black;
+       }
        </style>
 
 
