@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Draw</title>
+
+
+
+      <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body onload = "clearCanvas(); generateRestoreButtons();">
+
+
+  <canvas style="clear:both; border:1px solid" id="canv" width="500" height="300"></canvas>
+
+       <script  src="js/index.js"></script>
+       <script>
+
+var draw = document.getElementById('canv');
+var cont = draw.getContext('2d');
+var yesDraw;
+var markerC ;
+var markerSize;
+
+
+draw.onmousedown = function(e) {
+  yesDraw = true;
+
+   var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+
+      cont.beginPath();
+      cont.strokeStyle = color;
+      cont.moveTo(e.clientX, e.clientY);
+
+};
+draw.ontouchstart = function(e) {
+    e.preventDefault();
+  yesDraw = true;
+   alert("hello");
+   var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+
+      cont.beginPath();
+      cont.strokeStyle = color;
+      cont.moveTo(e.clientX, e.clientY);
+
+};
+draw.onmousemove = function(e) {
+  if (yesDraw) {
+      var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+    cont.lineWidth = markerSize;
+    cont.lineTo(e.clientX, e.clientY);
+    cont.strokeSyle = markerC;
+    cont.stroke();
+  }
+};
+draw.ontouchmove = function(e) {
+    e.preventDefault();
+  if (yesDraw) {
+      var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+    cont.lineWidth = markerSize;
+    cont.lineTo(e.clientX, e.clientY);
+    cont.strokeSyle = markerC;
+    cont.stroke();
+  }
+};
+draw.onmouseup = function() {
+    var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+  yesDraw = false;
+  cont.closePath();
+
+};
+draw.ontouchend = function() {
+    e.preventDefault();
+    var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+  yesDraw = false;
+  cont.closePath();
+
+};
+// set all pixels of the image to this color
+function colorPen(color) {
+  markerC = color;
+    var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+    cont.fillStyle = "white";
+    cont.closePath();
+    cont.strokeStyle = markerC;
+}
+
+function clearCanvas(){
+    var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+    cont.fillStyle = "white";
+    cont.fillRect(0,0,draw.getAttribute("width").valueOf(),draw.getAttribute("height").valueOf());
+    cont.closePath();
+    cont.strokeStyle = markerC;
+
+}
+
+function setmarkerSizeFromInput(){
+     var inputwidth = document.getElementById('markerSize');
+  var pw = inputwidth.value;
+  setmarkerSize(pw);
+}
+
+function setmarkerSize(pw) {
+
+  markerSize = pw;
+    var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+    cont.fillStyle = "white";
+    cont.closePath();
+    cont.strokeStyle = markerC;
+    cont.lineWidth= markerSize;
+}
+
+function saveLocal(){
+    //localStorage.setItem('markerC', markerC);
+    var draw = document.getElementById('c');
+    canvasData = draw.toDataURL();
+    var userCanvas = {
+        "markerC": markerC,
+        "canvasData": canvasData,
+        "markerSize": markerSize
+
+    }
+
+    var cn = document.getElementById('canvasName');
+    var name = cn.value;
+    localStorage.setItem (name, JSON.stringify(userCanvas));
+    generateRestoreButtons();
+}
+
+function restoreLocal(name){
+    clearCanvas();
+    var data = localStorage.getItem(name);
+    var userCanvas = JSON.parse(data);
+    colorPen (userCanvas['markerC']);
+    setmarkerSize(userCanvas['markerSize']);
+    var image = new Image;
+    image.onload = function(){
+    var draw = document.getElementById('c');
+    var cont = draw.getContext('2d');
+    cont.drawImage(image,0,0);
+    }
+
+    image.src = userCanvas['canvasData'];
+
+}
+
+function generateRestoreButtons (){
+    var restore = document.getElementById('restore');
+    restore.innerHTML = "";
+    var keys = Object.keys(localStorage);
+    for(i in keys){
+        key = localStorage.key(i);
+        var buttonString = `<button onclick="restoreLocal('${ key }');" id="${ key }">restore ${ key }</button><br>`;
+        restore.innerHTML += buttonString;
+
+
+
+    }
+
+
+}
+
+//<button id="restoreLocal" onclick="restoreLocal();">Restore from local</button>
+       </script>
+
+
+<br style="clear:both;"/>
+
+    <button id="clear" onclick="clearCanvas();">Clear</button>
+    <button id="colorBlack" onclick="colorPen('rgb(0,0,0)');">Black Pen</button>
+    <button id="colorRed" onclick="colorPen('rgb(255,0,0)');">Red Pen</button>
+    <button id="colorGreen" onclick="colorPen('rgb(0,255,0)');">Green Pen</button>
+    <button id="colorBlue" onclick="colorPen('rgb(0,0,255)');">Blue Pen</button><br><br>
+    <input id="markerSize" type= "text" name = "markerSize" /><button onclick ="setmarkerSizeFromInput();">Pen Width</button>
+    <input id="canvasName" type= "text" name = "canvasName" /><button id="saveLocal" onclick="saveLocal();">Save</button>
+    <div id="restore"></div>
+    <button id="clearlocalstorage" onclick="localStorage.clear(); generateRestoreButtons();"> Delete All</button>
+
+
+</body>
+
+</html>
