@@ -184,14 +184,12 @@ function generateRestoreButtons (){
          margin: auto;
          float:left;
          clear: both;
-         width: 45%;
          border:2px solid;
        }
 
        #ccontrol{
          float: right;
          width: 45%;
-         margin: auto;
        }
 
        #clear{
@@ -254,8 +252,8 @@ function generateRestoreButtons (){
        }
        </style>
 
-
-<br style="clear:both;"/>
+<canvas id="c" width="500" height="300"></canvas>
+<br>
 <div id="ccontrol">
     <button id="clear" onclick="clearCanvas();">Clear</button>
     <button id="colorBlack" onclick="colorPen('rgb(0,0,0)');">*Black*</button>
