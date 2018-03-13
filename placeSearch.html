@@ -9,7 +9,8 @@
       #map {
         height: 50%;
         width: 50%;
-        margin-left: 45%;
+        margin-left: 35%;
+        clear: both;
       }
       html, body {
         height: 100%;
@@ -102,10 +103,10 @@
           <label for="changetype-address">Addresses</label>
 
         </div>
-        <div id="strict-bounds-selector" class="pac-controls">
+        <!--<div id="strict-bounds-selector" class="pac-controls">
           <input type="checkbox" id="use-strict-bounds" value="">
           <label for="use-strict-bounds">Strict Bounds</label>
-        </div>
+        </div>-->
       </div>
       <div id="pac-container">
         <input id="pac-input" type="text"
@@ -129,7 +130,7 @@
         var card = document.getElementById('pac-card');
         var input = document.getElementById('pac-input');
         var types = document.getElementById('type-selector');
-        var strictBounds = document.getElementById('strict-bounds-selector');
+      /*  var strictBounds = document.getElementById('strict-bounds-selector');*/
 
         map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
@@ -197,11 +198,11 @@
         setupClickListener('changetype-address', ['address']);
         setupClickListener('changetype-establishment', ['establishment']);
 
-        document.getElementById('use-strict-bounds')
+      /*  document.getElementById('use-strict-bounds')
             .addEventListener('click', function() {
               console.log('Checkbox clicked! New state=' + this.checked);
               autocomplete.setOptions({strictBounds: this.checked});
-            });
+            });*/
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&libraries=places&callback=myMap"
