@@ -34,7 +34,7 @@ sig.onmousedown = function(e) {
     var ctx = sig.getContext('2d');
 
       ctx.beginPath();
-      ctx.strokeStyle = color;
+      ctx.strokeStyle = pencolor;
       ctx.moveTo(e.clientX, e.clientY);
 
 };
@@ -45,7 +45,7 @@ sig.ontouchstart = function(e) {
     var ctx = sig.getContext('2d');
 
       ctx.beginPath();
-      ctx.strokeStyle = color;
+      ctx.strokeStyle = pencolor;
       ctx.moveTo(e.clientX, e.clientY);
 
 };
