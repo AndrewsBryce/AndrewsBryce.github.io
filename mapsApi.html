@@ -7,7 +7,6 @@
   <meta name="author" content="Bryce Andrews">
 
   <script>
-  google.maps.event.addDomListener(window,'load',myMap);
   function myMap(){
     var mapOptions = {
       center: new google.maps.LatLng(53.694712,-6.475492),
@@ -85,7 +84,7 @@
     });*/
 
   </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&libraries=places&callback=myMap" type="text/javascript"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&callback=myMap" type="text/javascript"></script>
 
 
 <style>
@@ -109,7 +108,6 @@
 </head>
 
 <body>
-<script src="https://maps.googleapis.com/map/api/js?sensor=false"></script>
 <h1>Google Map: For your enjoyment.</h1>
 <input type="text" id="mapsearch">
 <div id="Mapit"></div>
