@@ -56,7 +56,7 @@
             console.log("First Wrestler's Grade: " + wrestlerOne.grade);
             console.log("Second Wrestler's Grade: " + wrestlerTwo.grade);
 
-            document.getElementById("info").innerHTML = wrestler.wreslterName + wrestler.wrestlerInfo + <br> + wrestlerOne.wrestlerName + <br> + wrestlerTwo.wrestlerName;
+            document.getElementById("other").innerHTML = wrestlerOne.wrestlerName + <br> + wrestlerTwo.wrestlerName;
 
         </script>
     </head>
@@ -65,5 +65,7 @@
         <p>Please "Inspect Element" console to see the objects and view page source to review the code.</p>
         <p>In the console element you will see objects created for different wrestlers with their information.</p>
         <p id="info"></p>
+        <br>
+        <p id="other"></p>
         <button type="button" onclick="window.location.href='index.html'">Index</button>
     </body>
