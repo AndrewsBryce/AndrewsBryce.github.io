@@ -23,7 +23,7 @@
 var hancock = document.getElementById('cvs');
 var ctx = hancock.getContext('2d');
 var yesDraw;
-var penColor ;
+var color;
 var penWidth;
 
 
@@ -34,7 +34,7 @@ hancock.onmousedown = function(e) {
     var ctx = hancock.getContext('2d');
 
       ctx.beginPath();
-      ctx.strokeStyle = pencolor;
+      ctx.strokeStyle = color;
       ctx.moveTo(e.clientX, e.clientY);
 
 };
@@ -45,7 +45,7 @@ hancock.ontouchstart = function(e) {
     var ctx = hancock.getContext('2d');
 
       ctx.beginPath();
-      ctx.strokeStyle = pencolor;
+      ctx.strokeStyle = color;
       ctx.moveTo(e.clientX, e.clientY);
 
 };
@@ -55,7 +55,7 @@ hancock.onmousemove = function(e) {
     var ctx = hancock.getContext('2d');
     ctx.lineWidth = penWidth;
     ctx.lineTo(e.clientX, e.clientY);
-    ctx.strokeSyle = penColor;
+    ctx.strokeSyle = color;
     ctx.stroke();
   }
 };
@@ -66,7 +66,7 @@ hancock.ontouchmove = function(e) {
     var ctx = hancock.getContext('2d');
     ctx.lineWidth = penWidth;
     ctx.lineTo(e.clientX, e.clientY);
-    ctx.strokeSyle = penColor;
+    ctx.strokeSyle = color;
     ctx.stroke();
   }
 };
@@ -92,7 +92,7 @@ function colorPen(color) {
     var ctx = hancock.getContext('2d');
     ctx.fillStyle = "white";
     ctx.closePath();
-    ctx.strokeStyle = penColor;
+    ctx.strokeStyle = color;
 }
 
 function clearCanvas(){
@@ -101,7 +101,7 @@ function clearCanvas(){
     ctx.fillStyle = "white";
     ctx.fillRect(0,0,hancock.getAttribute("width").valueOf(),hancock.getAttribute("height").valueOf());
     ctx.closePath();
-    ctx.strokeStyle = penColor;
+    ctx.strokeStyle = color;
 
 }
 
