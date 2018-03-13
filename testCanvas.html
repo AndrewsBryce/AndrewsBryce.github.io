@@ -38,17 +38,7 @@ hancock.onmousedown = function(e) {
       ctx.moveTo(e.clientX, e.clientY);
 
 };
-hancock.ontouchstart = function(e) {
-    e.preventDefault();
-  yesDraw = true;
-   var hancock = document.getElementById('cvs');
-    var ctx = hancock.getContext('2d');
 
-      ctx.beginPath();
-      ctx.strokeStyle = color;
-      ctx.moveTo(e.clientX, e.clientY);
-
-};
 hancock.onmousemove = function(e) {
   if (yesDraw) {
       var hancock = document.getElementById('cvs');
@@ -59,17 +49,7 @@ hancock.onmousemove = function(e) {
     ctx.stroke();
   }
 };
-hancock.ontouchmove = function(e) {
-    e.preventDefault();
-  if (yesDraw) {
-      var hancock = document.getElementById('cvs');
-    var ctx = hancock.getContext('2d');
-    ctx.lineWidth = penWidth;
-    ctx.lineTo(e.clientX, e.clientY);
-    ctx.strokeSyle = color;
-    ctx.stroke();
-  }
-};
+
 hancock.onmouseup = function() {
     var hancock = document.getElementById('cvs');
     var ctx = hancock.getContext('2d');
@@ -77,14 +57,7 @@ hancock.onmouseup = function() {
   ctx.closePath();
 
 };
-hancock.ontouchend = function(e) {
-    e.preventDefault();
-    var hancock = document.getElementById('cvs');
-    var ctx = hancock.getContext('2d');
-  yesDraw = false;
-  ctx.closePath();
 
-};
 // set all pixels of the image to this color
 function colorPen(color) {
   penColor = color;
