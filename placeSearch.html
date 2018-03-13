@@ -105,10 +105,7 @@
           <label for="changetype-address">Addresses</label>
 
         </div>
-        <!--<div id="strict-bounds-selector" class="pac-controls">
-          <input type="checkbox" id="use-strict-bounds" value="">
-          <label for="use-strict-bounds">Strict Bounds</label>
-        </div>-->
+
       </div>
       <div id="pac-container">
         <input id="pac-input" type="text"
@@ -120,6 +117,9 @@
       <span id="place-name"  class="title"></span><br>
       <span id="place-address"></span>
     </div>
+    <br>
+    <button type="button" onclick="window.location.href='index.html'">Index</button>
+
 
     <script>
 
@@ -131,15 +131,12 @@
         var card = document.getElementById('pac-card');
         var input = document.getElementById('pac-input');
         var types = document.getElementById('type-selector');
-      /*  var strictBounds = document.getElementById('strict-bounds-selector');*/
 
         map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
         var autocomplete = new google.maps.places.Autocomplete(input);
 
-        // Bind the map's bounds (viewport) property to the autocomplete object,
-        // so that the autocomplete requests use the current map bounds for the
-        // bounds option in the request.
+
         autocomplete.bindTo('bounds', map);
 
         var infowindow = new google.maps.InfoWindow();
@@ -155,13 +152,11 @@
           marker.setVisible(false);
           var place = autocomplete.getPlace();
           if (!place.geometry) {
-            // User entered the name of a Place that was not suggested and
-            // pressed the Enter key, or the Place Details request failed.
+
             window.alert("No details available for input: '" + place.name + "'");
             return;
           }
 
-          // If the place has a geometry, then present it on a map.
           if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
           } else {
@@ -186,8 +181,7 @@
           infowindow.open(map, marker);
         });
 
-        // Sets a listener on a radio button to change the filter type on Places
-        // Autocomplete.
+
         function setupClickListener(id, types) {
           var radioButton = document.getElementById(id);
           radioButton.addEventListener('click', function() {
@@ -199,11 +193,7 @@
         setupClickListener('changetype-address', ['address']);
         setupClickListener('changetype-establishment', ['establishment']);
 
-      /*  document.getElementById('use-strict-bounds')
-            .addEventListener('click', function() {
-              console.log('Checkbox clicked! New state=' + this.checked);
-              autocomplete.setOptions({strictBounds: this.checked});
-            });*/
+
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&libraries=places&callback=myMap"
