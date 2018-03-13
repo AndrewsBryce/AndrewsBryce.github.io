@@ -77,7 +77,7 @@ hancock.onmouseup = function() {
   ctx.closePath();
 
 };
-hancock.ontouchend = function() {
+hancock.ontouchend = function(e) {
     e.preventDefault();
     var hancock = document.getElementById('cvs');
     var ctx = hancock.getContext('2d');
