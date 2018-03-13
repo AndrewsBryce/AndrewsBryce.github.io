@@ -15,12 +15,12 @@
 <body onload = "clearCanvas(); generateRestoreButtons();">
 
 
-  <canvas id="c" width="500" height="300"></canvas>
+  <canvas id="cvs" width="500" height="300"></canvas>
 
        <script  src="js/index.js"></script>
        <script>
 
-var sig = document.getElementById('c');
+var sig = document.getElementById('cvs');
 var ctx = sig.getContext('2d');
 var isDrawing;
 var penColor ;
@@ -30,7 +30,7 @@ var penWidth;
 sig.onmousedown = function(e) {
   isDrawing = true;
 
-   var sig = document.getElementById('c');
+   var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
 
       ctx.beginPath();
@@ -42,7 +42,7 @@ sig.ontouchstart = function(e) {
     e.preventDefault();
   isDrawing = true;
    alert("hello");
-   var sig = document.getElementById('c');
+   var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
 
       ctx.beginPath();
@@ -52,7 +52,7 @@ sig.ontouchstart = function(e) {
 };
 sig.onmousemove = function(e) {
   if (isDrawing) {
-      var sig = document.getElementById('c');
+      var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
     ctx.lineWidth = penWidth;
     ctx.lineTo(e.clientX, e.clientY);
@@ -63,7 +63,7 @@ sig.onmousemove = function(e) {
 sig.ontouchmove = function(e) {
     e.preventDefault();
   if (isDrawing) {
-      var sig = document.getElementById('c');
+      var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
     ctx.lineWidth = penWidth;
     ctx.lineTo(e.clientX, e.clientY);
@@ -72,7 +72,7 @@ sig.ontouchmove = function(e) {
   }
 };
 sig.onmouseup = function() {
-    var sig = document.getElementById('c');
+    var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
   isDrawing = false;
   ctx.closePath();
@@ -80,7 +80,7 @@ sig.onmouseup = function() {
 };
 sig.ontouchend = function() {
     e.preventDefault();
-    var sig = document.getElementById('c');
+    var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
   isDrawing = false;
   ctx.closePath();
@@ -89,7 +89,7 @@ sig.ontouchend = function() {
 // set all pixels of the image to this color
 function colorPen(color) {
   penColor = color;
-    var sig = document.getElementById('c');
+    var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
     ctx.fillStyle = "white";
     ctx.closePath();
@@ -97,7 +97,7 @@ function colorPen(color) {
 }
 
 function clearCanvas(){
-    var sig = document.getElementById('c');
+    var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
     ctx.fillStyle = "white";
     ctx.fillRect(0,0,sig.getAttribute("width").valueOf(),sig.getAttribute("height").valueOf());
@@ -115,7 +115,7 @@ function setPenwidthFromInput(){
 function setPenwidth(pw) {
 
   penWidth = pw;
-    var sig = document.getElementById('c');
+    var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
     ctx.fillStyle = "white";
     ctx.closePath();
@@ -125,7 +125,7 @@ function setPenwidth(pw) {
 
 function saveLocal(){
     //localStorage.setItem('penColor', penColor);
-    var sig = document.getElementById('c');
+    var sig = document.getElementById('cvs');
     canvasData = sig.toDataURL();
     var userCanvas = {
         "penColor": penColor,
@@ -148,7 +148,7 @@ function restoreLocal(name){
     setPenwidth(userCanvas['penWidth']);
     var image = new Image;
     image.onload = function(){
-    var sig = document.getElementById('c');
+    var sig = document.getElementById('cvs');
     var ctx = sig.getContext('2d');
     ctx.drawImage(image,0,0);
     }
