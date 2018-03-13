@@ -79,7 +79,7 @@
 
       #title {
         color: #fff;
-        background-color: #4d90fe;
+        background-color: #81160D;
         font-size: 25px;
         font-weight: 500;
         padding: 6px 12px;
@@ -101,15 +101,7 @@
 
           <input type="radio" name="type" id="changetype-address">
           <label for="changetype-address">Addresses</label>
-
-          <input type="radio" name="type" id="changetype-geocode">
-          <label for="changetype-geocode">Geocodes</label>
         </div>
-        <div id="strict-bounds-selector" class="pac-controls">
-          <input type="checkbox" id="use-strict-bounds" value="">
-          <label for="use-strict-bounds">Strict Bounds</label>
-        </div>
-      </div>
       <div id="pac-container">
         <input id="pac-input" type="text"
             placeholder="Enter a location">
@@ -127,7 +119,7 @@
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-      function initMap() {
+      function myMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -33.8688, lng: 151.2195},
           zoom: 13
@@ -151,7 +143,7 @@
         infowindow.setContent(infowindowContent);
         var marker = new google.maps.Marker({
           map: map,
-          anchorPoint: new google.maps.Point(0, -29)
+          anchorPoint: new google.maps.Point(43.491651, -112.033965)
         });
 
         autocomplete.addListener('place_changed', function() {
@@ -202,16 +194,10 @@
         setupClickListener('changetype-all', []);
         setupClickListener('changetype-address', ['address']);
         setupClickListener('changetype-establishment', ['establishment']);
-        setupClickListener('changetype-geocode', ['geocode']);
 
-        document.getElementById('use-strict-bounds')
-            .addEventListener('click', function() {
-              console.log('Checkbox clicked! New state=' + this.checked);
-              autocomplete.setOptions({strictBounds: this.checked});
-            });
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&libraries=places&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2BHUa4D-RwUunSBh2yC5Z_-P1jmuiLJQ&libraries=places&callback=myMap"
         async defer></script>
   </body>
 </html>
