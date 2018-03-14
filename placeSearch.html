@@ -129,14 +129,14 @@
 
       function myMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: LatLng{lat: -33.8688, lng: 151.2195},
+          center: LatLng(lat: -33.8688, lng: 151.2195),
           zoom: 13
         });
         var card = document.getElementById('pac-card');
         var input = document.getElementById('pac-input');
         var types = document.getElementById('type-selector');
 
-        map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(card);
+        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
         var autocomplete = new google.maps.places.Autocomplete(input);
 
