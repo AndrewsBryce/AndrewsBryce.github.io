@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Sports Object</title>
         <meta name="author" content="Bryce Andrews">
+      </head>
+      <body>
+          <h2>JavaScript Objects: Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
+          <p>Please "Inspect Element" console to see the objects and view page source to review the code.</p>
+          <p>In the console element you will see objects created for different wrestlers with their information.</p>
+          <p id="info"></p>
+          <br>
+
+          <button type="button" onclick="window.location.href='index.html'">Index</button>
         <script type="text/javascript">
 
             // Creating an object literal
@@ -25,15 +34,41 @@
             document.getElementById("info").innerHTML = wrestler.firstName+ " " + wrestler.lastName+ ", " +wrestler.grade+ ", " +wrestler.school;
 
 
-        </script>
-    </head>
-    <body>
-        <h2>JavaScript Objects: Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
-        <p>Please "Inspect Element" console to see the objects and view page source to review the code.</p>
-        <p>In the console element you will see objects created for different wrestlers with their information.</p>
-        <p id="info"></p>
-        <br>
+            // Access object properties
+            console.log("First Name: " + wrestler.firstName);
+            console.log("Last Name: " + wrestler.lastName);
+            console.log("Grade: " + wrestler["grade"]);
 
-        <button type="button" onclick="window.location.href='index.html'">Index</button>
+            //Access Object Method Properties
+            console.log("Wrestler Name: " + wrestler.wrestlerName());
+            console.log("Wrestler Info: " + wrestler.wrestlerInfo());
+
+             // Create object using constructor
+            function Wrestlers (first, last, name) {
+                this.firstName = first;
+                this.lastName = last;
+                this.wrestlerName = first + " " + last;
+            }
+
+            var wrestlerOne = new Wrestlers("Kaden", "Hine");
+            var wrestlerTwo = new Wrestlers("Kade", "Hernandez");
+            document.getElementById("other").innerHTML = wrestlerOne.wrestlerName + <br> + wrestlerTwo.wrestlerName;
+
+
+            //Access new Objects
+            console.log("First Wrestler's Name: " + wrestlerOne.wrestlerName);
+            console.log("Second Wrestler's Name: " + wrestlerTwo.wrestlerName);
+
+            //Add additional properities to object
+
+            wrestlerOne.grade = 10;
+            wrestlerTwo.grade = 10;
+
+            console.log("First Wrestler's Grade: " + wrestlerOne.grade);
+            console.log("Second Wrestler's Grade: " + wrestlerTwo.grade);
+
+
+        </script>
+
     </body>
     </html>
