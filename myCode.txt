@@ -30,5 +30,9 @@
 {
 "display": "audio_video",
 "url": "https://andrewsbryce.github.io/audio_video.html"
+},
+{
+"display": "requestJSON",
+"url": "https://andrewsbryce.github.io/requestJSON.html"
 }
 ]
