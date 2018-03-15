@@ -1,0 +1,34 @@
+[
+{
+"display": "wrestlingArray",
+"url": "https://andrewsbryce.github.io/wrestlingArray/default.asp"
+},
+{
+"display": "displayevens",
+"url": "https://andrewsbryce.github.io/displayevens/default.asp"
+},
+{
+"display": "cardTrick",
+"url": "https://andrewsbryce.github.io/cardTrick/default.asp"
+},
+{
+"display": "growingCard",
+"url": "https://andrewsbryce.github.io/growingCard/default.asp"
+},
+{
+"display": "sports",
+"url": "https://andrewsbryce.github.io/sports/default.asp"
+},
+{
+"display": "placeSearch",
+"url": "https://andrewsbryce.github.io/placeSearch/default.asp"
+},
+{
+"display": "testCanvas",
+"url": "https://andrewsbryce.github.io/testCanvas/default.asp"
+},
+{
+"display": "audio_video",
+"url": "https://andrewsbryce.github.io/audio_video/default.asp"
+}
+]
