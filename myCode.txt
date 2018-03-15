@@ -1,34 +1,34 @@
 [
 {
 "display": "wrestlingArray",
-"url": "https://andrewsbryce.github.io/wrestlingArray/default.asp"
+"url": "https://andrewsbryce.github.io/wrestlingArray.html"
 },
 {
 "display": "displayevens",
-"url": "https://andrewsbryce.github.io/displayevens/default.asp"
+"url": "https://andrewsbryce.github.io/displayevens.html"
 },
 {
 "display": "cardTrick",
-"url": "https://andrewsbryce.github.io/cardTrick/default.asp"
+"url": "https://andrewsbryce.github.io/cardTrick.html"
 },
 {
 "display": "growingCard",
-"url": "https://andrewsbryce.github.io/growingCard/default.asp"
+"url": "https://andrewsbryce.github.io/growingCard.html"
 },
 {
 "display": "sports",
-"url": "https://andrewsbryce.github.io/sports/default.asp"
+"url": "https://andrewsbryce.github.io/sports.html"
 },
 {
 "display": "placeSearch",
-"url": "https://andrewsbryce.github.io/placeSearch/default.asp"
+"url": "https://andrewsbryce.github.io/placeSearch.html"
 },
 {
 "display": "testCanvas",
-"url": "https://andrewsbryce.github.io/testCanvas/default.asp"
+"url": "https://andrewsbryce.github.io/testCanvas.html"
 },
 {
 "display": "audio_video",
-"url": "https://andrewsbryce.github.io/audio_video/default.asp"
+"url": "https://andrewsbryce.github.io/audio_video.html"
 }
 ]
