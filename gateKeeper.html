@@ -124,6 +124,67 @@
             transform: rotateX(0);
   }
 
+  /* -- contact panel -- */
+  .contact {
+    width: 290px;
+    height: 240px;
+  }
+
+  /* -- diagonal axis rotation -- */
+  .diagonal .front {
+    -webkit-transform: rotate3d(45,45,0,0deg);
+            transform: rotate3d(45,45,0,0deg);
+  }
+  .diagonal .front:hover {
+    /* for the patient :) */
+    -webkit-transition-duration: 10s;
+            transition-duration: 10s;
+
+    -webkit-transform: rotate3d(45,45,0,-36deg);
+            transform: rotate3d(45,45,0,-36deg);
+  }
+
+  .diagonal.flip .front,
+  .diagonal.flip .front:hover {
+    -webkit-transform: rotate3d(-45,-45,0,150deg);
+            transform: rotate3d(-45,-45,0,150deg);
+
+    /* unset the long default transition time */
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+
+  .diagonal .front .message {
+    opacity: 0;
+    font-size: 1.4em;
+  }
+  .diagonal .front:hover .message {
+    opacity: .4;
+    -webkit-transition-duration: 12s;
+            transition-duration: 12s;
+
+    -webkit-transition-delay: 4s;
+            transition-delay: 4s;
+
+    -webkit-transform: translateX(-30px) translateZ(40px) scale(1.4);
+            transform: translateX(-30px) translateZ(40px) scale(1.4);
+  }
+  .diagonal.flip .front .message {
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transform: translateZ(0px) scale(.5);
+            transform: translateZ(0px) scale(.5);
+  }
+
+  .diagonal .back {
+    -webkit-transform: rotate3d(45,45,0,-180deg);
+            transform: rotate3d(45,45,0,-180deg);
+  }
+  .diagonal.flip .back {
+    -webkit-transform: rotate3d(45,45,0,-30deg);
+            transform: rotate3d(45,45,0,-30deg);
+  }
+
   /* -- swing like a gate -- */
   .swing .front,
   .swing .back {
