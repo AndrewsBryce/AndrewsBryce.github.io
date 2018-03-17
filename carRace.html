@@ -12,36 +12,24 @@ div#mark {
 	top: 50px;
 	left: -400px;
 }
-div#go {
-	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_QWg27mBnH3aNLcWtRLQMWMX1A42gd46a1CA8LODi2thXxWN-);
-  background-repeat: no-repeat;
-  background-size: contain;
-	width: 400px;
-	height: 200px;
-	position: absolute;
-	top: 50px;
-	left: -400px;
-}
+
 </style>
 <script>
-function slideIn(mark, go){
+function slideIn(el){
 	var elem = document.getElementById(el);
-
 	elem.style.transition = "left 0.5s ease-in 0s";
 	elem.style.left = "0px";
 }
 function slideOut(el){
 	var elem = document.getElementById(el);
 	elem.style.transition = "right 0.5s ease-out 0s";
-	elem.style.right = "400px";
+	elem.style.left = "+400px";
 }
 </script>
 </head>
 <body>
-<button onclick="slideIn();">On Mark</button>
-<button onclick="slideOut();">And GO!</button>
+<button onclick="slideIn('mark');">On Mark</button>
+<button onmouseover="slideOut('mark');">And GO!</button>
 <div id="mark"></div>
-<br>
-<div id="go"></div>
 </body>
 </html>
