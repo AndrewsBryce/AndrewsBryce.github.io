@@ -25,26 +25,15 @@ div#go {
 </style>
 <script>
 function slideIn(mark, go){
-	var set = document.getElementById(mark);
-  var move = document.getElementById(go);
+	var elem = document.getElementById(el);
 
-	set.style.transition = "left 0.5s ease-in 0s";
-  move.style.transition = "left 0.5s ease-in 0s";
-
-	set.style.left = "0px";
-  move.style.left = "0px";
-
+	elem.style.transition = "left 0.5s ease-in 0s";
+	elem.style.left = "0px";
 }
-function slideOut(mark, go){
-	var set = document.getElementById(mark);
-  var move = document.getElementById(go);
-
-	set.style.transition = "right 0.5s ease-out 0s";
-  move.style.transition = "right 0.5s ease-out 0s";
-
-	set.style.right = "400px";
-  move.style.right = "400px";
-
+function slideOut(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "right 0.5s ease-out 0s";
+	elem.style.right = "400px";
 }
 </script>
 </head>
