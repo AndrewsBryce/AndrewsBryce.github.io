@@ -37,13 +37,13 @@ function slideIn(mark, go){
 }
 function slideOut(mark, go){
 	var set = document.getElementById(mark);
-  var mark = document.getElementById(go);
+  var move = document.getElementById(go);
 
 	set.style.transition = "right 0.5s ease-out 0s";
-  go.style.transition = "right 0.5s ease-out 0s";
+  move.style.transition = "right 0.5s ease-out 0s";
 
 	set.style.right = "400px";
-  go.style.right = "400px";
+  move.style.right = "400px";
 
 }
 </script>
