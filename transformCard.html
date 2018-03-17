@@ -1,0 +1,54 @@
+DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Card Transform</title>
+        <meta name="author" content="Bryce Andrews">
+<style>
+html{
+  background-color: #db760a;
+}
+
+h1 p {
+font-family: fantasy;
+}
+
+
+
+div {
+    width: 100px;
+    height: 200px;
+    background-image: url("https://orig00.deviantart.net/8717/f/2014/044/c/a/ca1d2228bd6f3868aa09125800039b55-d76951d.png");
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+}
+
+div:hover {
+  width: 150px;
+  height: 80px;
+  background-image: url("https://orig00.deviantart.net/8717/f/2014/044/c/a/ca1d2228bd6f3868aa09125800039b55-d76951d.png");
+  -ms-transform: skewY(20deg); /* IE 9 */
+  -webkit-transform: skewY(20deg); /* Safari 3-8 */
+  transform: skewY(20deg);
+}
+
+
+</style>
+
+</head>
+<body>
+
+<h1>The Transform Property</h1>
+<br>
+<button type="button" onclick="window.location.href='index.html'">Index</button>
+
+<p>Hover over the card to watch it change!</p>
+
+<div>
+</div>
+
+</body>
+</html>
