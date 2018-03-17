@@ -24,21 +24,33 @@ div#go {
 }
 </style>
 <script>
-function slideIn(el){
-	var elem = document.getElementById(el);
-	elem.style.transition = "left 0.5s ease-in 0s";
-	elem.style.left = "0px";
+function slideIn(mark, go){
+	var set = document.getElementById(mark);
+  var move = document.getElementById(go);
+
+	set.style.transition = "left 0.5s ease-in 0s";
+  move.style.transition = "left 0.5s ease-in 0s";
+
+	set.style.left = "0px";
+  move.style.left = "0px";
+
 }
-function slideOut(el){
-	var elem = document.getElementById(el);
-	elem.style.transition = "right 0.5s ease-out 0s";
-	elem.style.right = "400px";
+function slideOut(mark, go){
+	var set = document.getElementById(mark);
+  var mark = document.getElementById(go);
+
+	set.style.transition = "right 0.5s ease-out 0s";
+  go.style.transition = "right 0.5s ease-out 0s";
+
+	set.style.right = "400px";
+  go.style.right = "400px";
+
 }
 </script>
 </head>
 <body>
-<button onclick="slideIn('mark', 'go');">On Mark</button>
-<button onclick="slideOut('mark', 'go');">And GO!</button>
+<button onclick="slideIn();">On Mark</button>
+<button onclick="slideOut();">And GO!</button>
 <div id="mark"></div>
 <br>
 <div id="go"></div>
