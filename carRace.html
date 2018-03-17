@@ -23,13 +23,13 @@ function slideIn(el){
 function slideOut(el){
 	var elem = document.getElementById(el);
 	elem.style.transition = "right 0.5s ease-out 0s";
-	elem.style.left = "+400px";
+	elem.style.right = "-400px";
 }
 </script>
 </head>
 <body>
 <button onclick="slideIn('mark');">On Mark</button>
-<button onmouseover="slideOut('mark');">And GO!</button>
+<button onclick="slideOut('mark');">And GO!</button>
 <div id="mark"></div>
 </body>
 </html>
