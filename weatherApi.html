@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Weather</title>
+            <title>WeatherApi</title>
     <meta name="author" content="Bryce Andrews">
   </head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
@@ -13,7 +13,8 @@ jQuery(document).ready(function($) {
   url : "http://api.wunderground.com/api/e6beb13551d2ba3c/geolookup/conditions/q/IA/Cedar_Rapids.json",
   dataType : "jsonp",
   success : function(parsed_json) {
-  var location = parsed_json['location']['city'];
+  var location = document.getElementsById('location');
+  location = parsed_json['location']['city'];
   var temp_f = parsed_json['current_observation']['temp_f'];
   alert("Current temperature in " + location + " is: " + temp_f);
   }
