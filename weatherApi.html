@@ -18,6 +18,13 @@
       <p id="windSpeed"></p>
     </div>
    </div>
+
+   <div id="timer">
+  <span id="days"></span>days
+  <span id="hours"></span>hours
+  <span id="minutes"></span>minutes
+  <span id="seconds"></span>seconds
+</div>
 <script>
 weatherAPI();
 
@@ -69,8 +76,41 @@ var api = "https://api.wunderground.com/api/" + apiKey + "/conditions/forecast/g
 }
 </script>
 <script>
-function plant(){
-  var date =
+var timer;
+
+var compareDate = new Date();
+compareDate.setDate(compareDate.getDate() + 7); //just for this demo today + 7 days
+
+timer = setInterval(function() {
+  timeBetweenDates(compareDate);
+}, 1000);
+
+function timeBetweenDates(toDate) {
+  var dateEntered = toDate;
+  var now = new Date();
+  var difference = dateEntered.getTime() - now.getTime();
+
+  if (difference <= 0) {
+
+    // Timer done
+    clearInterval(timer);
+
+  } else {
+
+    var seconds = Math.floor(difference / 1000);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+    var days = Math.floor(hours / 24);
+
+    hours %= 24;
+    minutes %= 60;
+    seconds %= 60;
+
+    $("#days").text(days);
+    $("#hours").text(hours);
+    $("#minutes").text(minutes);
+    $("#seconds").text(seconds);
+  }
 }
 </script>
 <style>
@@ -111,7 +151,22 @@ h1{
 }
 
 </style>
-
+<style>
+#timer {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #999;
+  letter-spacing: -1px;
+}
+#timer span {
+  font-size: 60px;
+  color: #333;
+  margin: 0 3px 0 15px;
+}
+#timer span:first-child {
+  margin-left: 0;
+}
+</style>
 
 
 </body>
