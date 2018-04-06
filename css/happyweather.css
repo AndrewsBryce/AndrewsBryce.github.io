@@ -3,7 +3,10 @@ html{
 }
 #weatherbox{
   width: 100%;
-  height: 150px;
+  height: 300px;
   clear: both;
   background-image: url("https://d38om4ir5igmin.cloudfront.net/production/pages/heros/188/large/HERO_Grand_Tetons_Schwabachers.jpg?1497527847");
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin-top: 100px;
 }
