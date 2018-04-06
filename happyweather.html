@@ -15,7 +15,24 @@
   </header>
   <main id="maincontent">
     <input id="zipcode" length="10px">
-    <div id="weatherbox"></div>
+    <div id="weatherbox">
+      <div id="tempbox">
+        <div id="manual-location" class="inputs">
+        <label for="enter-location">Enter your location using 5-digit zip code.</label>
+        <input type="text" name="enter-location" id="enter-location" />
+    </div>
+    <div class="inputs">
+        <label for="forcast-choice">Which type of forcast would you like to see?</label>
+        <select id="forcast-choice" name="forcast-choice">
+            <option value="weather">Current Weather</option>
+            <option value="forecast">5 day/3 hour Forcast</option>
+        </select>
+    </div>
+    <button id="request">Get Weather</button>
+
+<div id="results"></div>
+      </div>
+    </div>
   </main>
 </div>
 </body>
