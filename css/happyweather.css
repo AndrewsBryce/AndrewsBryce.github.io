@@ -11,10 +11,13 @@ html{
   margin-top: 100px;
 }
 #tempbox{
-  width: 50px;
+  width: 30%;
   height: 50px;
   margin: auto;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
 }
+
 #location-message {
     background-color:#E8AFAF;
     padding:20px;
