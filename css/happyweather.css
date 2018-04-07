@@ -48,8 +48,8 @@ body{
 
 iframe{
   clear: both;
-  margin-left: 40%;
-  margin-right: 10px;
+  margin-top: 0;
+  margin-right: 5px;
 }
 
 #growingplant{
@@ -72,16 +72,17 @@ iframe{
 
 .box {
     position: absolute;
-    width: 200px;
-    height: 100px;
+    width: 210px;
+    height: 110px;
+    padding: 5px;
     line-height: 200px;
     font-size: 25px;
     text-align: right;
     text-wrap: normal;
     border: 2px solid black;
     left: 0;
-    top: 100px;
-    margin-left: -25%;
+    margin-top: 50%;
+    margin-left: 10px;
 }
 
 #box1 {
