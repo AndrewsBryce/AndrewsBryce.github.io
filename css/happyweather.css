@@ -47,6 +47,7 @@ body{
 #location-message h3 {color: #B82828;}
 
 iframe{
+  clear: both;
   margin-left: 40%;
 }
 
