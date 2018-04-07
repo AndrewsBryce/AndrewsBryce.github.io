@@ -73,12 +73,12 @@ iframe{
 .box {
     position: absolute;
     width: 50%;
-    height: 300px;
-    line-height: 300px;
-    font-size: 50px;
+    height: 100px;
+    line-height: 200px;
+    font-size: 25px;
     text-align: center;
     border: 2px solid black;
-    left: 50%;
+    left: 0;
     top: 100px;
     margin-left: -25%;
 }
