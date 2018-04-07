@@ -12,7 +12,7 @@ $(document).ready(function () {
         console.log("entered location: " + enteredLocation);
         console.log("---");
 
-      var targetURL = "https://api.openweathermap.org/data/2.5/"+ forcastRequestType +"?zip="+ enteredLocation +",us&appid=19e005a1538e1e345999d12124968754&units=imperial"
+      var targetURL = "https://api.openweathermap.org/data/2.5/"+ forcastRequestType +"?zip="+ enteredLocation +",us&appid=2cd7a3cdf9aa73b98ff31770ce2a9999&units=imperial"
 
         $.ajax({
             url:targetURL,
@@ -66,7 +66,7 @@ $(document).ready(function () {
   console.log("future click");
 
         $.ajax({
-            url: "https://api.openweathermap.org/data/2.5/forecast?zip=44129,us&appid=19e005a1538e1e345999d12124968754",
+            url: "https://api.openweathermap.org/data/2.5/forecast?zip=44129,us&appid=2cd7a3cdf9aa73b98ff31770ce2a9999",
             dataType: "jsonp",
             success: function processResults(data) {
                 // step 1 - dump results into console to see what's in the objects returned
