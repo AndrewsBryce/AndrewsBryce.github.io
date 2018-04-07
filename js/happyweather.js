@@ -50,12 +50,11 @@ $(document).ready(function () {
   console.log("current click");
 
         $.ajax({
-            url: "https://api.openweathermap.org/data/2.5/weather?zip=44129,us&appid=19e005a1538e1e345999d12124968754",
+            url: "https://api.openweathermap.org/data/2.5/weather?zip=44129,us&appid=2cd7a3cdf9aa73b98ff31770ce2a9999",
             dataType: "jsonp",
             success: function processResults(data) {
                 // step 1 - dump results into console to see what's in the objects returned
                 console.log(data);
-
 
             }
 
