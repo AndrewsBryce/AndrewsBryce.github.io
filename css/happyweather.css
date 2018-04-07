@@ -62,10 +62,11 @@ iframe{
 
 #tipcontainer {
     position: absolute;
+    clear: both;
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 100%;
+    height: 30%;
     overflow: hidden;
 }
 
@@ -84,16 +85,16 @@ iframe{
 
 #box1 {
     background-color: green;
-    left: -150%;
 }
 
 #box2 {
     background-color: yellow;
+    left: 150%;
 }
 
 #box3 {
     background-color: red;
-    left: 150%;
+    left: -150%;
 }
 
 .inputs {
