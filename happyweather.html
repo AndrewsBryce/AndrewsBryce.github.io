@@ -37,10 +37,18 @@
 
 <div id="results"></div>-->
       </div>
-      <div id="tip"><p>Start seeds 6-8 weeks before your last frost date indoors for best results.
+      <div class="click panel circle">
+  <div class="front">
+    <h2>Click for a tip!</h2>
+  </div>
+  <div class="back">
+    <h2>Start seeds 6-8 weeks before your last frost date indoors for best results.</h2>
+  </div>
+</div>
+      <!--<div id="tip"><p>Start seeds 6-8 weeks before your last frost date indoors for best results.
         March is the perfect time to get those tomato and pepper seeds started indoors ready for an
         early spring planting! Also a great time to start planting those cool weather vegetables that
-        can withstand those last frost days of March and April.</p></div>
+        can withstand those last frost days of March and April.</p></div>-->
     </div>
   </main>
 </div>
@@ -63,5 +71,86 @@
     })
     ();
 </script>
+<script>
+// set up click/tap panels
+   $('.click').toggle(function(){
+     $(this).addClass('flip');
+   },function(){
+     $(this).removeClass('flip');
+   });
+</script>
+<style>
+.panel .front {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #ccc;
+    background: #6b7077;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+
+    -webkit-transform: rotateX(0) rotateY(0);
+            transform: rotateX(0) rotateY(0);
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    /* -- transition is the magic sauce for animation -- */
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+  .panel.flip .front {
+    z-index: 900;
+    border-color: #eee;
+    background: #333;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+
+    -webkit-transform: rotateY(179deg);
+            transform: rotateY(179deg);
+  }
+
+  .panel .back {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #ccc;
+    background: #333;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+
+    -webkit-transform: rotateY(-179deg);
+            transform: rotateY(-179deg);
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    /* -- transition is the magic sauce for animation -- */
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+
+  .panel.flip .back {
+    z-index: 1000;
+    background: #80868d;
+
+    -webkit-transform: rotateX(0) rotateY(0);
+            transform: rotateX(0) rotateY(0);
+
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  }
+</style>
 </body>
 </html>
