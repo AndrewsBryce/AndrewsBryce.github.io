@@ -76,7 +76,8 @@ iframe{
     height: 100px;
     line-height: 200px;
     font-size: 25px;
-    text-align: center;
+    text-align: right;
+    text-wrap: normal;
     border: 2px solid black;
     left: 0;
     top: 100px;
@@ -84,16 +85,16 @@ iframe{
 }
 
 #box1 {
-    background-color: green;
+    background-color: #8b9ab2;
 }
 
 #box2 {
-    background-color: yellow;
+    background-color: #8b9ab2;
     left: 150%;
 }
 
 #box3 {
-    background-color: red;
+    background-color: #8b9ab2;
     left: -150%;
 }
 
