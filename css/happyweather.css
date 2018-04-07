@@ -1,6 +1,9 @@
 html{
   background-color: #42c2f4;
 }
+body{
+  text-align: center;
+  }
 #weatherbox{
   width: 100%;
   height: auto;
