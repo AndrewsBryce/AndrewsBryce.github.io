@@ -11,6 +11,7 @@
     <script src="//code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
   </head>
 <body>
+    <h1>Happy Planting!</h1>
 <div id="wrapper">
   <header>
   </header>
@@ -51,7 +52,7 @@
         can withstand those last frost days of March and April.</p></div>-->
     </div>
   </main>
-  <h1>Happy Planting!</h1>
+
 </div>
 
 
@@ -73,12 +74,15 @@
     ();
 </script>
 <script>
+$(document).ready(function(){
+
 // set up click/tap panels
    $('.click').toggle(function(){
      $(this).addClass('flip');
    },function(){
      $(this).removeClass('flip');
    });
+ }
 </script>
 <style>
 .panel .front {
@@ -108,51 +112,31 @@
     -webkit-transition: all .4s ease-in-out;
             transition: all .4s ease-in-out;
   }
-  .panel.flip .front {
-    z-index: 900;
-    border-color: #eee;
-    background: #333;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  /* -- X axis rotation for click panel -- */
+   .click .front {
+     cursor: pointer;
+     -webkit-transform: rotateX(0);
+             transform: rotateX(0);
+   }
+   .click.flip .front {
+     -webkit-transform: rotateX(180deg);
+             transform: rotateX(180deg);
+   }
+   .click .back {
+     cursor: pointer;
+     -webkit-transform: rotateX(-180deg);
+             transform: rotateX(-180deg);
+   }
+   .click.flip .back {
+     -webkit-transform: rotateX(0);
+             transform: rotateX(0);
+   }
 
-    -webkit-transform: rotateY(179deg);
-            transform: rotateY(179deg);
-  }
-
-  .panel .back {
-    float: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 800;
-    width: inherit;
-    height: inherit;
-    border: 1px solid #ccc;
-    background: #333;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-
-    -webkit-transform: rotateY(-179deg);
-            transform: rotateY(-179deg);
-
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-
-    /* -- transition is the magic sauce for animation -- */
-    -webkit-transition: all .4s ease-in-out;
-            transition: all .4s ease-in-out;
-  }
-
-  .panel.flip .back {
-    z-index: 1000;
-    background: #80868d;
-
-    -webkit-transform: rotateX(0) rotateY(0);
-            transform: rotateX(0) rotateY(0);
-
-    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
-  }
+   /* -- contact panel -- */
+   .contact {
+     width: 290px;
+     height: 240px;
+   }
 </style>
 </body>
 </html>
