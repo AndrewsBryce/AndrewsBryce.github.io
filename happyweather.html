@@ -15,6 +15,7 @@
   </header>
   <main id="maincontent">
     <div id="weatherbox">
+      <div id="openweathermap-widget-12"></div>
       <div id="tempbox">
         <div id="manual-location" class="inputs">
         <label for="enter-location">Enter your location using 5-digit zip code.</label>
@@ -22,7 +23,7 @@
     </div>
     <div class="inputs">
         <label for="forcast-choice">Which type of forcast would you like to see?</label>
-        <select id="forcast-choice" name="forcast-choice">
+        <select id="forcast-choice" name="forcast-choice" >
             <option value="weather">Current Weather</option>
             <option value="forecast">5 day/3 hour Forcast</option>
         </select>
@@ -34,5 +35,9 @@
     </div>
   </main>
 </div>
+
+
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 12,cityid: '5596475',appid: '2cd7a3cdf9aa73b98ff31770ce2a9999',units: 'metric',containerid: 'openweathermap-widget-12',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
+</script>
 </body>
 </html>
