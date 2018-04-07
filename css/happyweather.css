@@ -49,6 +49,7 @@ body{
 iframe{
   clear: both;
   margin-left: 40%;
+  margin-right: 10px;
 }
 
 .inputs {
