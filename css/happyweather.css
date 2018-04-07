@@ -3,7 +3,7 @@ html{
 }
 #weatherbox{
   width: 100%;
-  height: 500px;
+  height: 50%;
   clear: both;
   background-image: url("https://d38om4ir5igmin.cloudfront.net/production/pages/heros/188/large/HERO_Grand_Tetons_Schwabachers.jpg?1497527847");
   background-repeat:no-repeat;
@@ -17,6 +17,11 @@ html{
   font-family: 'Lobster', cursive;
   font-size: 30px;
   word-wrap: normal;
+}
+
+#openweathermap-widget-12 :hover{
+  height: 150px;
+  width: 150px;
 }
 
 #tip{
