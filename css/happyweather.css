@@ -22,7 +22,7 @@ html{
 #tip{
   height: 100px;
   width: 100px;
-  visibility: hidden;
+/*  visibility: hidden;*/
   float: right;
   clear: left;
 }
