@@ -9,6 +9,7 @@
     <link href="AndrewsBryce.github.io/css/happyweather.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
   </head>
 <body>
     <h1>Happy Planting!</h1>
@@ -28,7 +29,7 @@
 <div id="dirt1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <img  id="seed1" src="https://developer.helpscout.com/images/seed.png" draggable="true" ondragstart="drag(event)" width="190" height="190">
 <br>
-<button type="button" onclick="grow()">Watch it grow!</button>
+<button>Click to grow!</button>
 </div>
     <div id="roots"></div>
 
@@ -80,10 +81,14 @@ function drop(ev) {
 }
 </script>
 <script>
-function grow(){
-        $("dirt1").animate({background-image: url"https://banner.kisspng.com/20180304/qrw/kisspng-birds-eye-chili-chili-con-carne-tomato-plant-cartoon-tomato-tree-5a9ca9a1db48c1.7550043915202164818982.jpg"});
-        $("seed1").animate({visibility: none});
-};
+$(document).ready(function(){
+  $("button").click(function(){
+        $("dirt1").animate({
+          background-image: url"https://banner.kisspng.com/20180304/qrw/kisspng-birds-eye-chili-chili-con-carne-tomato-plant-cartoon-tomato-tree-5a9ca9a1db48c1.7550043915202164818982.jpg"});
+        $("seed1").animate({
+          visibility: none});
+});
+});
 </script>
 <script>
 function slideIn(el){
