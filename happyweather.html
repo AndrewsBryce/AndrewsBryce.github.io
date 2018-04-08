@@ -47,6 +47,11 @@
         can withstand those last frost days of March and April.</div>
 
     </div>
+    <p>Drag the seed unto the dirt:</p>
+
+<div id="dirt1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="seed1" src="https://developer.helpscout.com/images/seed.png" draggable="true" ondragstart="drag(event)" width="190" height="190">
     <div id="roots"></div>
       <!--<div class="click panel circle">
   <div class="front">
@@ -82,20 +87,30 @@
       }, false);
     </script>
 
-
-
-</div>
 <script>
-onload="slideIn('roots');"
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
 </script>
 <script>
 function slideIn(el){
 	var elem = document.getElementById(el);
-	elem.style.transition = "left 0.5s ease-in 0s";
+	elem.style.transition = "top 3s ease-in 0s";
 	elem.style.left = "0px";
 }
 </script>
-<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+<script>
+window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
   window.myWidgetParam.push({
     id: 12,cityid: '5596475',
     appid: '2cd7a3cdf9aa73b98ff31770ce2a9999',
