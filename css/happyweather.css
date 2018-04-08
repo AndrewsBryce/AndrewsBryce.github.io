@@ -98,6 +98,11 @@ iframe{
     background-color: #8b9ab2;
     left: -150%;
 }
+#roots{
+  width: 50px;
+  height: 100px;
+  margin-top: -100px;
+}
 
 .inputs {
     width: 20%;

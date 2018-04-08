@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-
-
-
     $("#request").click(function () {
 
         var locationRequestType = $("#location-choice").val();

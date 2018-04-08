@@ -47,6 +47,7 @@
         can withstand those last frost days of March and April.</div>
 
     </div>
+    <div id="roots"></div>
       <!--<div class="click panel circle">
   <div class="front">
     <h2>Click for a tip!</h2>
@@ -84,8 +85,16 @@
 
 
 </div>
-
-
+<script>
+onload="slideIn('roots');"
+</script>
+<script>
+function slideIn(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "left 0.5s ease-in 0s";
+	elem.style.left = "0px";
+}
+</script>
 <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
   window.myWidgetParam.push({
     id: 12,cityid: '5596475',
