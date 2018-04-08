@@ -91,14 +91,14 @@ iframe{
     font-size: 15px;
     text-align: center;
     border: 2px solid black;
-    left: 50%;
+    left: 150%;
     top: 5px;
     margin-left: -25%;
 }
 
 #box1 {
     background-color: #8b9ab2;
-    left: -150%
+    left: 50%
 }
 
 #box2 {
@@ -107,7 +107,6 @@ iframe{
 
 #box3 {
     background-color: #8b9ab2;
-    left: 150%;
 }
 
 #roots{
