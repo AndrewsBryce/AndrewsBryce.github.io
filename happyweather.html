@@ -115,7 +115,7 @@ window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
 <script>
 $('.box').click(function() {
     $('.box').each(function() {
-        if ($(this).left < 0) {
+        if ($(this).offset().left < 0) {
             $(this).css("left", "150%");
         } else if ($(this).offset().left >
          $('#container').width()) {
