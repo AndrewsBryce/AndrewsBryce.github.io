@@ -46,11 +46,9 @@
  <hr>
  <div id="tipcontainer">
 
-   <div id="box1" class="box">Start seeds 6-8 weeks before your last frost date indoors for best results.</div>
-   <div id="box2" class="box">March is the perfect time to get those tomato and pepper seeds started indoors ready for an
-   early spring planting!</div>
-   <div id="box3" class="box">Also a great time to start planting those cool weather vegetables that
-   can withstand those last frost days of March and April.</div>
+   <div id="box1" class="box">Start seeds 6-8 weeks before your last frost date indoors.</div>
+   <div id="box2" class="box">March is the time to get those tomato and pepper seeds started!</div>
+   <div id="box3" class="box">Start planting those cool weather vegetables the last days of March and April.</div>
 
 </div>
 </div>
@@ -116,7 +114,7 @@ window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
 $('.box').click(function() {
     $('.box').each(function() {
         if ($(this).offset().left < 0) {
-            $(this).css("left", "-150%");
+            $(this).css("left", "150%");
         } else if ($(this).offset().left > $('#container').width()) {
             $(this).animate({
                 left: '50%',
