@@ -20,11 +20,12 @@ body{
 }
 
 #plantseed{
+  font-size: .5vw;
   height: 400px;
   width: 200px;
   position: absolute;
   top: 100px;
-  right: 5px;
+  right: 15px;
 }
 
 #location-message {
