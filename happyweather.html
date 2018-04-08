@@ -82,12 +82,10 @@ function drop(ev) {
 }
 </script>
 <script>
-$(document).ready(function(){
-    $("button").click(function grow(){
+function grow(){
         $("dirt1").animate({background-image: url"https://banner.kisspng.com/20180304/qrw/kisspng-birds-eye-chili-chili-con-carne-tomato-plant-cartoon-tomato-tree-5a9ca9a1db48c1.7550043915202164818982.jpg"});
-        $("seed1").animate({visibility: none;})
-    });
-});
+        $("seed1").animate({visibility: none});
+};
 </script>
 <script>
 function slideIn(el){
@@ -121,12 +119,12 @@ $('.box').click(function() {
             $(this).css("left", "150%");
         } else if ($(this).offset().left > $('#container').width()) {
             $(this).animate({
-                left: '50%',
-            }, 500 );
+                left: '0%',
+            }, 300 );
         } else {
             $(this).animate({
                 left: '-150%',
-            }, 500 );
+            }, 300 );
         }
     });
 });
