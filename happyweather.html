@@ -116,7 +116,7 @@ window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
 $('.box').click(function() {
     $('.box').each(function() {
         if ($(this).offset().left < 0) {
-            $(this).css("left", "150%");
+            $(this).css("left", "-150%");
         } else if ($(this).offset().left > $('#container').width()) {
             $(this).animate({
                 left: '0%',
@@ -129,17 +129,7 @@ $('.box').click(function() {
     });
 });
 </script>
-<script>
-$(document).ready(function(){
 
-// set up click/tap panels
-   $('.click').toggle(function(){
-     $(this).addClass('flip');
-   },function(){
-     $(this).removeClass('flip');
-   });
- })
-</script>
 
 </body>
 </html>
