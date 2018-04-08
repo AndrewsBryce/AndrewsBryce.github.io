@@ -18,6 +18,9 @@ body{
 #openweathermap-widget-12 :hover{
 
 }
+#dragseed{
+  background-color: white;
+}
 
 #plantseed{
   font-size: 2vw;
@@ -42,13 +45,14 @@ iframe{
   clear: both;
   margin-top: 5px;
   margin-right: 5px;
+  margin-left: 5px;
 }
 
 #growingplant{
   height: 150px;
   width: 60px;
   margin-left: 5px;
-  margin-bottom: -
+  margin-bottom: auto;
   background-image: url(http://www.clker.com/cliparts/v/U/R/j/x/2/growing-plant-hi.png);
 }
 
@@ -81,7 +85,7 @@ iframe{
 
 #box2 {
     background-color: #8b9ab2;
-    left: -300px;
+    left: -350px;
 }
 
 #box3 {
