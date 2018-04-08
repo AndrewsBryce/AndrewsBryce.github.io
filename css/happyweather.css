@@ -63,8 +63,8 @@ body{
     margin-right: 5px;
 }
 button {
-  clear: both;
-  margin-bottom: 0;
+position: relative;
+ margin-bottom: 0;
 }
 
 
