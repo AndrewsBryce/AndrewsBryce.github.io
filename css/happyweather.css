@@ -41,6 +41,9 @@ body{
     margin-left: 5px;
     border: 1px solid #aaaaaa;
 }
+#seed1{
+    margin: 10;
+}
 
 
 #location-message {
