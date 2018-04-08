@@ -124,7 +124,8 @@ $('.box').click(function() {
             $(this).animate({
                 left: '50%',
             }, 500 );
-        } else {
+        } else if ($(this).offset().left ==
+          $('#container').width()){
             $(this).animate({
                 margin-left: '-150%',
             }, 500 );
