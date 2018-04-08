@@ -80,12 +80,14 @@ function drop(ev) {
 }
 </script>
 <script>
-function grow(){
-  @keyframes example{
-    from{background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsnhW4GqoOd2udWWgGCwlEirsSpMKPaWnMET-NTEYmCU5w5LN_9A);}
-    to{background-image: url(https://banner.kisspng.com/20180304/qrw/kisspng-birds-eye-chili-chili-con-carne-tomato-plant-cartoon-tomato-tree-5a9ca9a1db48c1.7550043915202164818982.jpg);}
-
-}
+$(document).ready(function(){
+  $("button").click(function(){
+        $("dirt1").animate({
+          background-image: url"https://banner.kisspng.com/20180304/qrw/kisspng-birds-eye-chili-chili-con-carne-tomato-plant-cartoon-tomato-tree-5a9ca9a1db48c1.7550043915202164818982.jpg"});
+        $("seed1").animate({
+          visibility: none});
+  });
+});
 </script>
 <script>
 function slideIn(el){
@@ -123,7 +125,7 @@ $('.box').click(function() {
                 left: '50%',
             }, 500 );
         } else {
-            $(this).css({
+            $(this).animate({
                 left: '-150%',
             }, 500 );
         }
