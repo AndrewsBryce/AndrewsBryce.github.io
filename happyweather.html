@@ -24,7 +24,7 @@
 
 <div id="plantseed">
       <p id="dragseed">Drag the seed onto the dirt:</p>
-
+<div id="tomato"></div>
 <div id="dirt1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <img  id="seed1" src="https://developer.helpscout.com/images/seed.png" draggable="true" ondragstart="drag(event)" width="190" height="190">
 <br>
@@ -83,9 +83,8 @@ function drop(ev) {
 $(document).ready(function(){
   $("button").click(function(){
         $("dirt1").animate({
-          background-image: url"https://banner.kisspng.com/20180304/qrw/kisspng-birds-eye-chili-chili-con-carne-tomato-plant-cartoon-tomato-tree-5a9ca9a1db48c1.7550043915202164818982.jpg"});
-        $("seed1").animate({
-          visibility: none});
+        height: 'toggle'
+      });
   });
 });
 </script>

@@ -32,6 +32,17 @@ body{
   top: 100px;
   right: 0;
 }
+#tomato{
+  position: absolute;
+  background-image: url(https://banner.kisspng.com/20180304/qrw/kisspng-birds-eye-chili-chili-con-carne-tomato-plant-cartoon-tomato-tree-5a9ca9a1db48c1.7550043915202164818982.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin-left: 5px;
+}
 #dirt1 {
     position: absolute;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsnhW4GqoOd2udWWgGCwlEirsSpMKPaWnMET-NTEYmCU5w5LN_9A);
@@ -46,7 +57,7 @@ body{
     animation-duration: 4s;
 }
 #seed1{
-  clear: both;
+    clear: both;
     float: right;
     margin-top: 5px;
     margin-right: 5px;
