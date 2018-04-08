@@ -81,12 +81,12 @@ iframe{
 
 #box2 {
     background-color: #8b9ab2;
-    left: 150%;
+    left: -300px;
 }
 
 #box3 {
     background-color: #8b9ab2;
-    left: -150%;
+    left: -350px;
 }
 #dirt1 {
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsnhW4GqoOd2udWWgGCwlEirsSpMKPaWnMET-NTEYmCU5w5LN_9A);

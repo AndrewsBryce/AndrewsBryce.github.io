@@ -119,12 +119,12 @@ $('.box').click(function() {
             $(this).css("left", "-150%");
         } else if ($(this).offset().left > $('#container').width()) {
             $(this).animate({
-                left: '0%',
-            }, 300 );
+                left: '50%',
+            }, 500 );
         } else {
             $(this).animate({
                 left: '-150%',
-            }, 300 );
+            }, 500 );
         }
     });
 });
