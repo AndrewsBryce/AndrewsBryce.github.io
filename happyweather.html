@@ -122,17 +122,12 @@ $('.box').click(function() {
         } else if ($(this).offset().left >
          $('#container').width()) {
             $(this).animate({
-                left: '50%',
+                left: '50%'
             }, 500 );
-        } else if ($(this).offset().left ===
-          $('#container').width()){
+        } else {
             $(this).animate({
-                left: '-150%',
+                left: '-150%'
             }, 500 );
-        } else{
-          $(this).animate({
-              left: '-150%',
-          }, 500 );
         }
     });
 });
