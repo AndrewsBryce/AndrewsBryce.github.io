@@ -23,12 +23,23 @@ body{
 }
 
 #plantseed{
-  font-size: 2vw;
-  height: 400px;
-  width: 200px;
+  font-size: 1.5vw;
+  text-align: center;
+  height: 100%;
+  width: 50%;
   position: absolute;
   top: 100px;
-  right: 15px;
+  right: 0;
+}
+#dirt1 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsnhW4GqoOd2udWWgGCwlEirsSpMKPaWnMET-NTEYmCU5w5LN_9A);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin-left: 5px;
+    border: 1px solid #aaaaaa;
 }
 
 #location-message {
@@ -92,15 +103,7 @@ iframe{
     background-color: #8b9ab2;
     left: 150%;
 }
-#dirt1 {
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsnhW4GqoOd2udWWgGCwlEirsSpMKPaWnMET-NTEYmCU5w5LN_9A);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
-}
+
 #roots{
   background-image: url(https://png.pngtree.com/element_pic/16/11/23/3c57029e36b66128a19647a9487f1288.jpg);
   width: 50px;
