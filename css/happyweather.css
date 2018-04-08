@@ -27,6 +27,8 @@ body{
 }
 
 #plantseed{
+  height: 400px;
+  width: 400px;
   position: absolute;
   top: 8px;
   right: 5px;
