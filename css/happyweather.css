@@ -59,7 +59,6 @@ iframe{
     padding: 5px;
     width: 350px;
     height: 250px;
-    font-size: 1.5vw;
     overflow: hidden;
 }
 
@@ -69,11 +68,10 @@ iframe{
     height: 200px;
     padding: 5px;
     line-height: 200px;
-    font-size: 25px;
-    text-align: right;
+    font-size: 1.5vw;
+    text-align: left;
     text-wrap: normal;
     border: 2px solid black;
-    left: 0;
     margin: auto;
 }
 
