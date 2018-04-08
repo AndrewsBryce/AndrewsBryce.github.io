@@ -118,6 +118,7 @@ iframe{
 #box1 {
     background-color: #8b9ab2;
     left: -150%;
+    z-index: 1;
 }
 
 #box2 {
