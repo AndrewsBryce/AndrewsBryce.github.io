@@ -26,16 +26,10 @@ body{
 
 }
 
-#tip{
-  height: 100px;
-  width: 100px;
-/*  visibility: hidden;*/
-  float: right;
-  clear: left;
-}
-
-#tip :hover{
-  visibility: visible;
+#plantseed{
+  position: absolute;
+  top: 8px;
+  right: 5px;
 }
 
 #location-message {
