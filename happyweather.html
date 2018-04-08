@@ -116,15 +116,15 @@ window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
 $('.box').click(function() {
     $('.box').each(function() {
         if ($(this).offset().left < 0) {
-            $(this).css("left", "-50%");
+            $(this).css("left", "150%");
         } else if ($(this).offset().left >
          $('#container').width()) {
             $(this).animate({
-                left: '150%',
+                left: '50%',
             }, 500 );
         } else {
             $(this).animate({
-                left: '50%',
+                left: '-150%',
             }, 500 );
         }
     });
